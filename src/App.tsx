@@ -1,3 +1,4 @@
+import FeatureCards from "./sections/FeatureCards ";
 import Hero from "./sections/Hero";
 import LogoSection from "./sections/LogoSection";
 import Navbar from "./sections/Navbar";
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <ShowcaseSection />
       <LogoSection />
+      <FeatureCards />
     </main>
   );
 }
