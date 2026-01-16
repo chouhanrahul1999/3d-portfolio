@@ -4,7 +4,7 @@ import Hero from "./sections/Hero";
 import LogoSection from "./sections/LogoSection";
 import Navbar from "./sections/Navbar";
 import ShowcaseSection from "./sections/ShowcaseSection";
-
+import TachStack from "./sections/TachStack";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       <LogoSection />
       <FeatureCards />
       <ExperienceSection />
+      <TachStack />
     </main>
   );
 }
