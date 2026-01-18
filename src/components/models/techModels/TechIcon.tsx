@@ -11,8 +11,11 @@ interface TechIconProps {
 }
 
 const TechIcon = ({ model }: TechIconProps) => {
-  return
- 
+  return (
+    <Canvas>
+
+    </Canvas>
+  );
 };
 
 export default TechIcon;
