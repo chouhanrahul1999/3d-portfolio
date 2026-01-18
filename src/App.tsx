@@ -1,3 +1,4 @@
+import Contact from "./sections/Contact";
 import ExperienceSection from "./sections/ExperienceSection";
 import FeatureCards from "./sections/FeatureCards ";
 import Hero from "./sections/Hero";
@@ -16,6 +17,7 @@ function App() {
       <FeatureCards />
       <ExperienceSection />
       <TachStack />
+      <Contact />
     </main>
   );
 }
