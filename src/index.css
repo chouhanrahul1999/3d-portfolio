@@ -301,11 +301,11 @@ section {
     @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
 
     .footer-container {
-      @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 w-full;
+      @apply flex md:flex-row flex-col gap-5 md:gap-0 w-full md:justify-between justify-center items-center ;
     }
 
     p {
-      @apply text-center md:text-start;
+      @apply text-center md:text-center;
     }
 
     .socials {
