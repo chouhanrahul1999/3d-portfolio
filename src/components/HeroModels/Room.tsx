@@ -57,8 +57,12 @@ export function Room(props: React.ComponentProps<"group"> & { screensRef?: React
     color: "#d90429",
   });
 
-  const bodyMaterial = new THREE.MeshPhongMaterial({
-    map: matcapTexture,
+  const wallMaterial = new THREE.MeshPhongMaterial({
+    color: "#e8e8e8", // Light gray walls
+  });
+
+  const floorMaterial = new THREE.MeshPhongMaterial({
+    map: matcapTexture, // Brown floor
   });
 
   const tableMaterial = new THREE.MeshPhongMaterial({
@@ -87,7 +91,12 @@ export function Room(props: React.ComponentProps<"group"> & { screensRef?: React
         geometry={nodes._________6_blinn1_0.geometry}
         material={curtainMaterial}
       />
-      <mesh geometry={nodes.body1_blinn1_0.geometry} material={bodyMaterial} />
+
+      {/* Walls (upper part) */}
+      <mesh geometry={nodes.body1_blinn1_0.geometry} material={wallMaterial} position={[0, 0.1, 0]} />
+      {/* Floor (lower part) */}
+      <mesh geometry={nodes.body1_blinn1_0.geometry} material={floorMaterial} position={[0, -0.1, 0]} />
+
       <mesh geometry={nodes.cabin_blinn1_0.geometry} material={tableMaterial} />
       <mesh
         geometry={nodes.chair_body_blinn1_0.geometry}
