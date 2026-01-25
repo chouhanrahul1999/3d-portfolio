@@ -46,9 +46,13 @@ type GLTFResult = GLTF & {
   animations: THREE.AnimationClip[];
 };
 
-export function Room(props: React.ComponentProps<"group"> & { screensRef?: React.RefObject<THREE.Mesh | null> }) {
+export function Room(
+  props: React.ComponentProps<"group"> & {
+    screensRef?: React.RefObject<THREE.Mesh | null>;
+  },
+) {
   const { nodes, materials } = useGLTF(
-    "/models/optimized-room.glb"
+    "/models/optimized-room.glb",
   ) as unknown as GLTFResult;
 
   const matcapTexture = useTexture("/images/textures/mat1.png");
@@ -57,13 +61,12 @@ export function Room(props: React.ComponentProps<"group"> & { screensRef?: React
     color: "#d90429",
   });
 
-
-  const floorMaterial = new THREE.MeshPhongMaterial({
-    map: matcapTexture, // Brown floor
+  const bodyMaterial = new THREE.MeshPhongMaterial({
+    map: matcapTexture,
   });
 
   const tableMaterial = new THREE.MeshPhongMaterial({
-    color: "#582f0e",
+    color: "#fec29f",
   });
 
   const radiatorMaterial = new THREE.MeshPhongMaterial({
@@ -71,11 +74,11 @@ export function Room(props: React.ComponentProps<"group"> & { screensRef?: React
   });
 
   const compMaterial = new THREE.MeshStandardMaterial({
-    color: "#fff",
+    color: "#fffff",
   });
 
   const pillowMaterial = new THREE.MeshPhongMaterial({
-    color: "#8338ec",
+    color: "#726f8a",
   });
 
   const chairMaterial = new THREE.MeshPhongMaterial({
@@ -89,17 +92,17 @@ export function Room(props: React.ComponentProps<"group"> & { screensRef?: React
         material={curtainMaterial}
       />
 
-
-      <mesh geometry={nodes.body1_blinn1_0.geometry} material={floorMaterial} position={[0, 0.1, 0]} />
-
-      <mesh geometry={nodes.body1_blinn1_0.geometry} material={floorMaterial} position={[0, -0.1, 0]} />
+      <mesh geometry={nodes.body1_blinn1_0.geometry} material={bodyMaterial} />
 
       <mesh geometry={nodes.cabin_blinn1_0.geometry} material={tableMaterial} />
+
       <mesh
         geometry={nodes.chair_body_blinn1_0.geometry}
         material={chairMaterial}
       />
+
       <mesh geometry={nodes.comp_blinn1_0.geometry} material={compMaterial} />
+
       <mesh
         ref={props.screensRef}
         geometry={nodes.emis_lambert1_0.geometry}
