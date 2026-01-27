@@ -77,7 +77,7 @@ const ShowcaseSection = () => {
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
+              <h2>3d Landing page of Mackbook Model.</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
@@ -86,6 +86,30 @@ const ShowcaseSection = () => {
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
             </div>
+          </div>
+        </div>
+
+        <div className="showcaselayout">
+
+          <div className="project-list-wrapper overflow-hidden">
+            <div className="project" ref={libraryRef}>
+              <div className="image-wrapper bg-[#FFEFDB]">
+                <img
+                  src="/images/project2.png"
+                  alt="Library Management Platform"
+                />
+              </div>
+              <h2>3d Landing page of Mackbook Model.</h2>
+            </div>
+
+            <div className="project" ref={ycDirectoryRef}>
+              <div className="image-wrapper bg-[#FFE7EB]">
+                <img src="/images/project3.png" alt="YC Directory App" />
+              </div>
+              <h2>YC Directory - A Startup Showcase App</h2>
+            </div>
+
+
           </div>
         </div>
       </div>
