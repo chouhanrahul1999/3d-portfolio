@@ -40,7 +40,7 @@ section {
 
 @layer components {
   .padding-x {
-    @apply px-5 md:px-10;
+    @apply px-5 md:px-10 md:pb-6;
   }
 
   .padding-x-lg {

@@ -71,7 +71,7 @@ const Hero = () => {
         </header>
 
         <figure>
-          <div className="hero-3d-layout">
+          <div className="hero-3d-layout cursor-grab">
             <HeroExperince />
           </div>
         </figure>

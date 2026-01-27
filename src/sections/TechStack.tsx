@@ -4,7 +4,7 @@ import TechIcon from "../components/models/techModels/TechIcon";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const TachStack = () => {
+const TechStack = () => {
   useGSAP(() => {
     gsap.fromTo('.tech-card', {y: 50, opacity: 0}, {
       y: 0,
@@ -51,4 +51,4 @@ const TachStack = () => {
   );
 };
 
-export default TachStack;
+export default TechStack;
