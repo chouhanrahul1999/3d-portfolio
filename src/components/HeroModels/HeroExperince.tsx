@@ -15,7 +15,7 @@ const HeroExperince = () => {
   const screensRef = useRef<THREE.Mesh>(null);
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas camera={{ position: [0, 3, 15], fov: 43 }}>
       <OrbitControls
         enablePan={false}
         enableZoom={!isTablet}
