@@ -64,16 +64,24 @@ const ShowcaseSection = () => {
           <div ref={rydeRef} className="first-project-wrapper cursor-pointer">
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
-                <img src="/images/project1.png" alt="Zentry Game Landing Page" />
+                <img
+                  src="/images/project1.png"
+                  alt="Zentry Game Landing Page"
+                />
               </div>
             </div>
             <div className="text-content">
-              <h2>
-                Zentry Game Landing Page - Interactive Gaming Experience
+              <h2 className="mb-4">
+                Zentry Game Landing Page - Interactive Gaming Experience <ProjectLinks githubUrl="#" className="" />
               </h2>
-              <ProjectLinks liveUrl="#" githubUrl="#" />
               <p className="text-white-50 md:text-xl">
-                A modern gaming landing page built with TypeScript, React, TailwindCSS & GSAP for smooth animations. This immersive gaming experience features interactive elements, responsive design optimized for all devices, and advanced scroll-triggered animations. The project showcases cutting-edge web technologies with seamless user interactions and dynamic visual effects that bring the gaming world to life.
+                A modern gaming landing page built with TypeScript, React,
+                TailwindCSS & GSAP for smooth animations. This immersive gaming
+                experience features interactive elements, responsive design
+                optimized for all devices, and advanced scroll-triggered
+                animations. The project showcases cutting-edge web technologies
+                with seamless user interactions and dynamic visual effects that
+                bring the gaming world to life.
               </p>
             </div>
           </div>
@@ -88,20 +96,26 @@ const ShowcaseSection = () => {
                   />
                 </div>
               </div>
-              <h2>MacBook 3D Landing Page - Interactive Product Showcase</h2>
-              <ProjectLinks liveUrl="#" githubUrl="#" />
-              <p className="text-white-50 text-sm mt-2">Built with GSAP, TailwindCSS & Three.js for immersive 3D experience.</p>
+              <h2 className="mb-4">MacBook Pro 3D Landing Page <ProjectLinks githubUrl="#" /></h2>
+              <p className="text-white-50 text-sm mt-2">
+                Built with GSAP, TailwindCSS & Three.js for immersive 3D
+                experience.
+              </p>
             </div>
 
             <div className="project cursor-pointer" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB] holographic-card">
                 <div className="holographic-content">
-                  <img src="/images/project3.png" alt="Velvet Pour Drinks Website" />
+                  <img
+                    src="/images/project3.png"
+                    alt="Velvet Pour Drinks Website"
+                  />
                 </div>
               </div>
-              <h2>Velvet Pour - Premium Drinks Experience</h2>
-              <ProjectLinks disabled />
-              <p className="text-white-50 text-sm mt-2">Elegant beverage website serving variety of drinks, built with TailwindCSS & GSAP animations.</p>
+              <h2 className="mb-4">Velvet Pour - Premium Drinks Experience <ProjectLinks disabled /></h2>
+              <p className="text-white-50 text-sm mt-2">
+                Elegant beverage website serving variety of drinks, built with GSAP animations.
+              </p>
             </div>
           </div>
         </div>
@@ -116,9 +130,9 @@ const ShowcaseSection = () => {
               </div>
             </div>
             <div className="text-content">
-              <h2>
+              <h2 className="mb-4">
                 On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Zentry
+                called Zentry <ProjectLinks githubUrl="#" />
               </h2>
               <p className="text-white-50 md:text-xl">
                 An app built with React Native, Expo, & TailwindCSS for a fast,

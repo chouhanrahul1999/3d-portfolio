@@ -1,42 +1,30 @@
-import { FiExternalLink } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 
 interface ProjectLinksProps {
-  liveUrl?: string;
   githubUrl?: string;
   disabled?: boolean;
+  className?: string;
 }
 
-const ProjectLinks = ({ liveUrl, githubUrl, disabled = false }: ProjectLinksProps) => {
+const ProjectLinks = ({ githubUrl, disabled = false, className = "" }: ProjectLinksProps) => {
   return (
-    <div className="flex items-center gap-3 mt-3 mb-4">
-      {!disabled && liveUrl && (
-        <a 
-          href={liveUrl}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
-        >
-          <FiExternalLink className="w-4 h-4" />
-          View Live
-        </a>
-      )}
+    <span className={`inline-flex items-center ml-2 ${className}`}>
       {!disabled && githubUrl && (
-        <a 
+        <a
           href={githubUrl}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white text-sm font-medium rounded-lg transition-colors"
+          className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-800 hover:bg-gray-900 text-white text-xs font-medium rounded-md transition-colors"
         >
-          <FaGithub className="w-4 h-4" />
-          Source Code
+          <FaGithub className="w-3 h-3" />
+          Sorce Code
         </a>
       )}
       {disabled && (
-        <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 text-gray-300 text-sm font-medium rounded-lg cursor-not-allowed">
-            <FiExternalLink className="w-4 h-4" />
-            Coming Soon
-          </span>
-        </div>
+        <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-gray-600 text-gray-300 text-xs font-medium rounded-md cursor-not-allowed">
+          <FaGithub className="w-3 h-3" />
+          Coming Soon
+        </span>
       )}
-    </div>
+    </span>
   );
 };
 

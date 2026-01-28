@@ -173,7 +173,7 @@ section {
       }
 
       .text-content {
-        @apply space-y-5 mt-5;
+        @apply space-y-5 mt-6;
 
         .badges {
           @apply flex gap-2 mb-4;
@@ -197,7 +197,7 @@ section {
       }
 
       h2 {
-        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-5;
+        @apply text-lg md:text-xl lg:text-2xl font-semibold mt-4;
       }
     }
   }
