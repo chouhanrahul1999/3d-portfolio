@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import TitleHeader from "../components/TitleHeader";
+import ProjectLinks from "../components/ProjectLinks";
 import "../styles/holographic-cards.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -70,6 +71,7 @@ const ShowcaseSection = () => {
               <h2>
                 Zentry Game Landing Page - Interactive Gaming Experience
               </h2>
+              <ProjectLinks liveUrl="#" githubUrl="#" />
               <p className="text-white-50 md:text-xl">
                 A modern gaming landing page built with TypeScript, React, TailwindCSS & GSAP for smooth animations. This immersive gaming experience features interactive elements, responsive design optimized for all devices, and advanced scroll-triggered animations. The project showcases cutting-edge web technologies with seamless user interactions and dynamic visual effects that bring the gaming world to life.
               </p>
@@ -87,6 +89,7 @@ const ShowcaseSection = () => {
                 </div>
               </div>
               <h2>MacBook 3D Landing Page - Interactive Product Showcase</h2>
+              <ProjectLinks liveUrl="#" githubUrl="#" />
               <p className="text-white-50 text-sm mt-2">Built with GSAP, TailwindCSS & Three.js for immersive 3D experience.</p>
             </div>
 
@@ -97,6 +100,7 @@ const ShowcaseSection = () => {
                 </div>
               </div>
               <h2>Velvet Pour - Premium Drinks Experience</h2>
+              <ProjectLinks disabled />
               <p className="text-white-50 text-sm mt-2">Elegant beverage website serving variety of drinks, built with TailwindCSS & GSAP animations.</p>
             </div>
           </div>
