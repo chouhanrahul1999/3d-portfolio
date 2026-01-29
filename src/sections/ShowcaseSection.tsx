@@ -64,7 +64,13 @@ const ShowcaseSection = () => {
         />
 
         <div className="showcaselayout pb-36">
-          <div ref={rydeRef} className="first-project-wrapper cursor-pointer">
+          <div
+            ref={rydeRef}
+            onClick={() => {
+              window.open("https://zentry-game.vercel.app", "_blank");
+            }}
+            className="first-project-wrapper cursor-pointer"
+          >
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
                 <img
@@ -91,7 +97,9 @@ const ShowcaseSection = () => {
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project cursor-pointer" ref={libraryRef}>
+            <div className="project cursor-pointer" onClick={() => {
+              window.open("https://apple-macbook-website1996.vercel.app/")
+            }} ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
