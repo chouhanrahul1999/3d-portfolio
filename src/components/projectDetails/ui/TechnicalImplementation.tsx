@@ -1,4 +1,4 @@
-import { Code, Terminal, Layers } from "lucide-react";
+import { Terminal, Layers } from "lucide-react";
 
 const TechnicalImplementation = ({ implementation }: any) => {
   return (
@@ -18,7 +18,7 @@ const TechnicalImplementation = ({ implementation }: any) => {
           <div className="relative bg-linear-to-br from-[#0C0E23] to-[#161A31] border border-[#363749] rounded-lg sm:rounded-xl p-4 sm:p-6 lg:p-8 h-full hover:border-[#CBACF9]/20 transition-all duration-300 w-full">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-linear-to-br from-[#CBACF9]/60 to-[#38BDF8]/60 rounded-lg flex items-center justify-center shadow-sm shadow-[#CBACF9]/10">
-                <Layers size={16} className="text-white sm:text-lg" />
+                <Layers size={16} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white">
                 Architecture
@@ -47,7 +47,7 @@ const TechnicalImplementation = ({ implementation }: any) => {
                 Key Highlights
               </h4>
               <div className="space-y-2 sm:space-y-3">
-                {implementation?.highlights.map((highlight, index) => (
+                {implementation?.highlights.map((highlight: any, index: any) => (
                   <div key={index} className="group/item">
                     <div className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg bg-linear-to-r from-white/5 to-white/8 border border-white/8 hover:border-[#CBACF9]/15 transition-all duration-300">
                       <div className="shrink-0 w-5 h-5 bg-linear-to-br from-[#CBACF9]/70 to-[#38BDF8]/70 rounded-full flex items-center justify-center mt-0.5 sm:mt-1">
@@ -72,7 +72,7 @@ const TechnicalImplementation = ({ implementation }: any) => {
           <div className="relative bg-linear-to-br from-[#0C0E23] to-[#161A31] border border-[#363749] rounded-lg sm:rounded-xl p-4 sm:p-6 lg:p-8 h-full hover:border-[#38BDF8]/20 transition-all duration-300 w-full">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-linear-to-br from-[#38BDF8]/60 to-[#CBACF9]/60 rounded-lg flex items-center justify-center shadow-sm shadow-[#38BDF8]/10">
-                <Terminal size={16} className="text-white sm:text-lg" />
+                <Terminal size={16} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white">
                 Code Snippet

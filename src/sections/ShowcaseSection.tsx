@@ -6,6 +6,7 @@ import TitleHeader from "../components/TitleHeader";
 import ProjectLinks from "../components/ProjectLinks";
 import "../styles/holographic-cards.css";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,7 @@ const ShowcaseSection = () => {
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
+  const navigate = useNavigate();
 
   useGSAP(() => {
     const projects = [
@@ -131,7 +133,13 @@ const ShowcaseSection = () => {
         <TitleHeader title="My Full-Stack Project" />
 
         <div className="showcaselayout  ">
-          <div ref={rydeRef} className="first-project-wrapper cursor-pointer">
+          <div
+            ref={rydeRef}
+            className="first-project-wrapper cursor-pointer"
+            onClick={() => {
+              navigate("/project/betteruptime");
+            }}
+          >
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
                 <img src="/images/project4.png" alt="Ryde App Interface" />
@@ -150,7 +158,13 @@ const ShowcaseSection = () => {
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
+            <div
+              className="project"
+              ref={libraryRef}
+              onClick={() => {
+                navigate("/project/betteruptime");
+              }}
+            >
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
@@ -162,7 +176,13 @@ const ShowcaseSection = () => {
               <h2>3d Landing page of Mackbook Model.</h2>
             </div>
 
-            <div className="project" ref={ycDirectoryRef}>
+            <div
+              className="project"
+              ref={ycDirectoryRef}
+              onClick={() => {
+                navigate("/project/excelidraw");
+              }}
+            >
               <div className="image-wrapper bg-[#FFE7EB] holographic-card">
                 <div className="holographic-content">
                   <img src="/images/project5.png" alt="YC Directory App" />
@@ -175,11 +195,7 @@ const ShowcaseSection = () => {
 
         <div className="w-full pt-24  flex justify-center">
           <div className="min-w-2xs md:min-w-sm">
-          <Button
-            className=" "
-            text="View all Projects"
-            onClick={() => {}}
-          />
+            <Button className=" " text="View all Projects" onClick={() => {}} />
           </div>
         </div>
       </div>

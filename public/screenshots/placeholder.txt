@@ -1,0 +1,15 @@
+This folder will contain project screenshots:
+- crtd-homepage.png
+- crtd-dashboard.png  
+- crtd-auth.png
+- excelidraw-collaboration.png
+- excelidraw-tools.png
+- excelidraw-rooms.png
+- paytm-dashboard.png
+- paytm-transfer.png
+- paytm-history.png
+- brainly-organization.png
+- brainly-analytics.png
+- brainly-sharing.png
+
+Upload your actual screenshots here and update the paths in projects.js
