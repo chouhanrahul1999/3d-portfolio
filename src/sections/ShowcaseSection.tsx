@@ -173,8 +173,8 @@ const ShowcaseSection = () => {
           </div>
         </div>
 
-        <div className="w-full pt-24 flex justify-center">
-          <div className="min-w-sm">
+        <div className="w-full pt-24  flex justify-center">
+          <div className="min-w-2xs md:min-w-sm">
           <Button
             className=" "
             text="View all Projects"
