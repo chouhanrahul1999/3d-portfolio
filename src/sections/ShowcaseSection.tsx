@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import TitleHeader from "../components/TitleHeader";
 import ProjectLinks from "../components/ProjectLinks";
 import "../styles/holographic-cards.css";
+import Button from "../components/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,7 +73,8 @@ const ShowcaseSection = () => {
             </div>
             <div className="text-content">
               <h2 className="mb-4">
-                Zentry Game Landing Page - Interactive Gaming Experience <ProjectLinks githubUrl="#" className="" />
+                Zentry Game Landing Page - Interactive Gaming Experience{" "}
+                <ProjectLinks githubUrl="#" className="" />
               </h2>
               <p className="text-white-50 md:text-xl">
                 A modern gaming landing page built with TypeScript, React,
@@ -96,7 +98,9 @@ const ShowcaseSection = () => {
                   />
                 </div>
               </div>
-              <h2 className="mb-4">MacBook Pro 3D Landing Page <ProjectLinks githubUrl="#" /></h2>
+              <h2 className="mb-4">
+                MacBook Pro 3D Landing Page <ProjectLinks githubUrl="#" />
+              </h2>
               <p className="text-white-50 text-sm mt-2">
                 Built with GSAP, TailwindCSS & Three.js for immersive 3D
                 experience.
@@ -112,9 +116,13 @@ const ShowcaseSection = () => {
                   />
                 </div>
               </div>
-              <h2 className="mb-4">Velvet Pour - Premium Drinks Experience <ProjectLinks disabled /></h2>
+              <h2 className="mb-4">
+                Velvet Pour - Premium Drinks Experience{" "}
+                <ProjectLinks disabled />
+              </h2>
               <p className="text-white-50 text-sm mt-2">
-                Elegant beverage website serving variety of drinks, built with GSAP animations.
+                Elegant beverage website serving variety of drinks, built with
+                GSAP animations.
               </p>
             </div>
           </div>
@@ -126,7 +134,7 @@ const ShowcaseSection = () => {
           <div ref={rydeRef} className="first-project-wrapper cursor-pointer">
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
-                <img src="/images/project1.png" alt="Ryde App Interface" />
+                <img src="/images/project4.png" alt="Ryde App Interface" />
               </div>
             </div>
             <div className="text-content">
@@ -146,7 +154,7 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
-                    src="/images/project2.png"
+                    src="/images/project6.png"
                     alt="Library Management Platform"
                   />
                 </div>
@@ -157,7 +165,7 @@ const ShowcaseSection = () => {
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB] holographic-card">
                 <div className="holographic-content">
-                  <img src="/images/project3.png" alt="YC Directory App" />
+                  <img src="/images/project5.png" alt="YC Directory App" />
                 </div>
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
@@ -165,7 +173,15 @@ const ShowcaseSection = () => {
           </div>
         </div>
 
-        <div className="showcaselayout"></div>
+        <div className="w-full pt-24 flex justify-center">
+          <div className="min-w-sm">
+          <Button
+            className=" "
+            text="View all Projects"
+            onClick={() => {}}
+          />
+          </div>
+        </div>
       </div>
     </div>
   );
