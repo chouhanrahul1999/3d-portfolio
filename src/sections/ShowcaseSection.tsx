@@ -140,6 +140,65 @@ const ShowcaseSection = () => {
 
         <TitleHeader title="My Full-Stack Project" />
 
+        <div className="showcaselayout pb-24">
+          <div
+            ref={rydeRef}
+            className="first-project-wrapper cursor-pointer"
+            onClick={() => navigate("/project/betteruptime")}
+          >
+            <div className="image-wrapper holographic-card">
+              <div className="holographic-content">
+                <img src="/images/project4.png" alt="Ryde App Interface" />
+              </div>
+            </div>
+            <div className="text-content">
+              <h2 className="mb-4">
+                BetterUptime - Web Monitoring App<ProjectLinks githubUrl="https://github.com/chouhanrahul1999/betteruptime-app" />
+              </h2>
+              <p className="text-white-50 md:text-xl">
+                Full-stack microservices architecture with dual event streaming using Redis Streams and Kafka for multi-region website monitoring with real-time notifications.
+              </p>
+            </div>
+          </div>
+
+          <div className="project-list-wrapper overflow-hidden">
+            <div
+              className="project"
+              ref={libraryRef}
+              onClick={() => {
+                navigate("/project/mackbook");
+              }}
+            >
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
+                <div className="holographic-content">
+                  <img
+                    src="/images/project6.png"
+                    alt="Library Management Platform"
+                  />
+                </div>
+              </div>
+              <h2>3d Landing page of Mackbook Model.</h2>
+            </div>
+
+            <div
+              className="project"
+              ref={ycDirectoryRef}
+              onClick={() => {
+                navigate("/project/excelidraw");
+              }}
+            >
+              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+                <div className="holographic-content">
+                  <img src="/images/project5.png" alt="YC Directory App" />
+                </div>
+              </div>
+              <h2>YC Directory - A Startup Showcase App</h2>
+            </div>
+          </div>
+        </div>
+
+        <TitleHeader title="My React-Native Projects" />
+
         <div className="showcaselayout  ">
           <div
             ref={rydeRef}
@@ -150,7 +209,7 @@ const ShowcaseSection = () => {
           >
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
-                <img src="/images/project4.png" alt="Ryde App Interface" />
+                <img src="/images/react1.png" alt="Ryde App Interface" />
               </div>
             </div>
             <div className="text-content">
@@ -176,7 +235,7 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
-                    src="/images/project6.png"
+                    src="/images/react2.png"
                     alt="Library Management Platform"
                   />
                 </div>
@@ -193,7 +252,7 @@ const ShowcaseSection = () => {
             >
               <div className="image-wrapper bg-[#FFE7EB] holographic-card">
                 <div className="holographic-content">
-                  <img src="/images/project5.png" alt="YC Directory App" />
+                  <img src="/images/react3.png" alt="YC Directory App" />
                 </div>
               </div>
               <h2>YC Directory - A Startup Showcase App</h2>
