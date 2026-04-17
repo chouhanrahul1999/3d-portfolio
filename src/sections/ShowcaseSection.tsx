@@ -82,7 +82,7 @@ const ShowcaseSection = () => {
             <div className="text-content">
               <h2 className="mb-4">
                 Zentry Game Landing Page - Interactive Gaming Experience{" "}
-                <ProjectLinks githubUrl="#" className="" />
+                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/zentry-app" className="" />
               </h2>
               <p className="text-white-50 md:text-xl">
                 A modern gaming landing page built with TypeScript, React,
@@ -109,7 +109,7 @@ const ShowcaseSection = () => {
                 </div>
               </div>
               <h2 className="mb-4">
-                MacBook Pro 3D Landing Page <ProjectLinks githubUrl="#" />
+                MacBook Pro 3D Landing Page <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/Apple-Macbook_website" />
               </h2>
               <p className="text-white-50 text-sm mt-2">
                 Built with GSAP, TailwindCSS & Three.js for immersive 3D
@@ -128,7 +128,7 @@ const ShowcaseSection = () => {
               </div>
               <h2 className="mb-4">
                 Velvet Pour - Premium Drinks Experience{" "}
-                <ProjectLinks disabled />
+                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/gsap-cocktails" />
               </h2>
               <p className="text-white-50 text-sm mt-2">
                 Elegant beverage website serving variety of drinks, built with
@@ -156,7 +156,7 @@ const ShowcaseSection = () => {
                 BetterUptime - Web Monitoring App<ProjectLinks githubUrl="https://github.com/chouhanrahul1999/betteruptime-app" />
               </h2>
               <p className="text-white-50 md:text-xl">
-                Full-stack microservices architecture with dual event streaming using Redis Streams and Kafka for multi-region website monitoring with real-time notifications.
+                Full-stack microservices architecture with dual event streaming using Redis Streams and Kafka for multi-region website monitoring with real-time notifications. Monitors websites across India and USA at 3-minute intervals, detecting downtime and instantly alerting users via Email, Slack, Discord, Webhook, and Telegram — delivering notifications in under 5 seconds with 99.9% system availability.
               </p>
             </div>
           </div>
@@ -166,7 +166,7 @@ const ShowcaseSection = () => {
               className="project"
               ref={libraryRef}
               onClick={() => {
-                navigate("/project/mackbook");
+                window.open(" https://crtd.in/", "_blank");
               }}
             >
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
@@ -177,7 +177,11 @@ const ShowcaseSection = () => {
                   />
                 </div>
               </div>
-              <h2>3d Landing page of Mackbook Model.</h2>
+              <h2>CRTD Technology Web Application.</h2>
+
+              <p className="text-white-50 text-sm mt-2">
+                A comprehensive web application for CRTD Technology built with the MERN stack, featuring automated deployment through CI/CD pipeline.
+              </p>
             </div>
 
             <div
@@ -192,7 +196,11 @@ const ShowcaseSection = () => {
                   <img src="/images/project5.png" alt="YC Directory App" />
                 </div>
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>Excelidraw - Real-Time Collaborative Whiteboard <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/Exceliodraw" /></h2>
+
+              <p className="text-white-50 text-sm mt-2">
+                A real-time collaborative whiteboard application with dual-backend architecture, WebSocket synchronization & comprehensive drawing tools.
+              </p>
             </div>
           </div>
         </div>

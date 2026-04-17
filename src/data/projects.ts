@@ -313,7 +313,7 @@ export const projects = [
   {
     id: "betteruptime",
     title: "BetterUptime - Web Monitoring App",
-    description: "Full-stack microservices architecture with dual event streaming using Redis Streams and Kafka for multi-region website monitoring with real-time notifications.",
+    description: "Full-stack microservices architecture with dual event streaming using Redis Streams and Kafka for multi-region website monitoring with real-time notifications. Monitors websites across India and USA at 3-minute intervals, detecting downtime and instantly alerting users via Email, Slack, Discord, Webhook, and Telegram. Built with Next.js, Node.js, PostgreSQL, Docker, and JWT authentication — delivering notifications in under 5 seconds with 99.9% system availability.",
     image: "/media/screenshots/betteruptime.svg",
     carouselImages: [
       '/screenshots/bh1.png',
