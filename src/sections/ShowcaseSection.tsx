@@ -252,16 +252,17 @@ const ShowcaseSection = () => {
             <div
               className="project"
               ref={ycDirectoryRef}
-              onClick={() => {
-                navigate("/project/excelidraw");
-              }}
+              onClick={() => navigate("/project/restate")}
             >
               <div className="image-wrapper bg-[#FFE7EB] holographic-card">
                 <div className="holographic-content">
-                  <img src="/images/react3.png" alt="YC Directory App" />
+                  <img src="/images/react3.png" alt="ReState Real Estate App" />
                 </div>
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              <h2>ReState - React Native Real Estate App</h2>
+              <p className="text-white-50 text-sm mt-2">
+                Browse property listings, view agent profiles, and manage your account with Google OAuth.
+              </p>
             </div>
           </div>
         </div>

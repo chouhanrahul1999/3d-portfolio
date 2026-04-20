@@ -1,4 +1,4 @@
-import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack, fastFoodTechStack, movieAppTechStack } from './techStacks.js';
+import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack, fastFoodTechStack, movieAppTechStack, realStateTechStack } from './techStacks.js';
 
 export const projects = [
   {
@@ -691,6 +691,78 @@ export const projects = [
       ]
     },
     githubUrl: "https://github.com/chouhanrahul1999/movie-app",
+    liveUrl: null
+  },
+  {
+    id: "restate",
+    title: "ReState - React Native Real Estate App",
+    description: "A full-stack mobile real estate app built with React Native and Appwrite. Browse property listings, view detailed property info, explore agent profiles, and manage your account — with Google OAuth authentication.",
+    image: "/images/react3.png",
+    techStack: realStateTechStack,
+    features: [
+      {
+        title: "Google OAuth",
+        description: "Secure sign-in via Google using Appwrite's OAuth2 provider with persistent session management",
+        icon: "FaGoogle"
+      },
+      {
+        title: "Property Listings",
+        description: "Browse featured and recommended properties with real-time search and category filters (House, Condo, Villa, etc.)",
+        icon: "FaHome"
+      },
+      {
+        title: "Property Details",
+        description: "Full property page with image gallery, facilities, agent info, location, reviews, and price",
+        icon: "FaBuilding"
+      },
+      {
+        title: "Database Seeding",
+        description: "Automated seed script to populate Appwrite with agents, properties, galleries, and reviews",
+        icon: "FaDatabase"
+      }
+    ],
+    implementation: {
+      architecture: "React Native App with Appwrite Backend & Google OAuth",
+      highlights: [
+        "Google OAuth2 authentication via Appwrite with GlobalProvider context",
+        "Custom useAppwrite hook for data fetching with loading, error, and refetch support",
+        "File-based navigation with Expo Router for clean screen structure",
+        "Properties filtered by type and searched by name via Appwrite queries",
+        "Home screen shows 5 featured + 6 recommended properties in parallel",
+        "Property details fetch full document, reviews, gallery, and agent in parallel"
+      ],
+      codeSnippet: "// Custom useAppwrite hook\nexport function useAppwrite({ fn, params, skip }) {\n  const [data, setData] = useState([]);\n  const [loading, setLoading] = useState(!skip);\n  const [error, setError] = useState(null);\n\n  const fetchData = async () => {\n    setLoading(true);\n    try {\n      const result = await fn(params);\n      setData(result);\n    } catch (err) {\n      setError(err);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  useEffect(() => { if (!skip) fetchData(); }, []);\n  return { data, loading, error, refetch: fetchData };\n}"
+    },
+    demonstrations: [
+      {
+        title: "Google OAuth & Home Feed",
+        description: "Authentication and home experience: • User taps sign in and is redirected to Google OAuth via Appwrite • On success, session is stored and GlobalProvider exposes user state • Home feed loads 5 featured properties and 6 recommended in a grid • Real-time search and category filter tabs update listings instantly",
+        outcome: "Seamless Google sign-in with a rich property browsing experience."
+      },
+      {
+        title: "Explore & Property Details",
+        description: "Search and detailed property view: • Explore page searches and filters all properties by type • Tapping a card navigates to /properties/[id] • Details page fetches full property, gallery images, reviews, and agent info in parallel • Displays facilities, bedrooms, bathrooms, price, area, and location",
+        outcome: "Complete property discovery with rich detail pages."
+      },
+      {
+        title: "Agent Profiles & User Account",
+        description: "Agent and profile management: • Each property links to an agent with name, email, and avatar • Profile screen shows logged-in user info, bookings, payments, and settings • Logout clears Appwrite session and redirects to sign-in screen",
+        outcome: "Full account management with agent transparency."
+      }
+    ],
+    impact: {
+      metrics: [
+        { label: "Auth", value: "Google OAuth2" },
+        { label: "Platforms", value: "iOS & Android" },
+        { label: "Properties", value: "20+ seeded listings" }
+      ],
+      outcomes: [
+        "Implemented Google OAuth2 authentication with Appwrite OAuth2 provider",
+        "Built reusable useAppwrite hook for consistent data fetching across all screens",
+        "Created automated seed script populating agents, properties, galleries, and reviews"
+      ]
+    },
+    githubUrl: "https://github.com/chouhanrahul1999/restate",
     liveUrl: null
   }
 ];

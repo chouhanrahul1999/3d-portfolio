@@ -81,3 +81,11 @@ export const movieAppTechStack = [
   { name: "NativeWind", iconType: "SiTailwindcss", color: "#06B6D4" },
   { name: "TMDB API", iconType: "SiThemoviedatabase", color: "#01B4E4" },
 ];
+
+export const realStateTechStack = [
+  { name: "React Native", iconType: "FaReact", color: "#61DAFB" },
+  { name: "Expo", iconType: "SiExpo", color: "#FFFFFF" },
+  { name: "TypeScript", iconType: "SiTypescript", color: "#3178C6" },
+  { name: "Appwrite", iconType: "SiAppwrite", color: "#FD366E" },
+  { name: "NativeWind", iconType: "SiTailwindcss", color: "#06B6D4" },
+];
