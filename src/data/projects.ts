@@ -1,4 +1,4 @@
-import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack } from './techStacks.js';
+import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack, fastFoodTechStack } from './techStacks.js';
 
 export const projects = [
   {
@@ -547,6 +547,78 @@ export const projects = [
       ]
     },
     githubUrl: "https://github.com/chouhanrahul1999/zapier-app",
+    liveUrl: null
+  },
+  {
+    id: "fast-food-app",
+    title: "Fast Food App - Mobile Food Ordering",
+    description: "A full-stack mobile food ordering app built with React Native and Expo. Users can browse food categories, search menu items, customize orders, manage their cart, and place orders — all with a clean and modern UI.",
+    image: "/images/food.png",
+    techStack: fastFoodTechStack,
+    features: [
+      {
+        title: "Authentication",
+        description: "Sign up and sign in with email and password using Appwrite backend",
+        icon: "FaLock"
+      },
+      {
+        title: "Browse & Search",
+        description: "Browse offer cards and search menu items by name with category filters (Burgers, Pizzas, Burritos, Wraps, Bowls, Sandwiches)",
+        icon: "FaSearch"
+      },
+      {
+        title: "Cart Management",
+        description: "Add items to cart, increase/decrease quantity, remove items, and view payment summary with delivery fee and discount",
+        icon: "FaShoppingCart"
+      },
+      {
+        title: "Global State",
+        description: "Zustand for managing authentication and cart state across the app",
+        icon: "FaCogs"
+      }
+    ],
+    implementation: {
+      architecture: "React Native Mobile App with Appwrite Backend",
+      highlights: [
+        "File-based navigation with Expo Router for clean routing structure",
+        "Appwrite backend for authentication, database, and storage",
+        "Zustand stores for auth and cart global state management",
+        "NativeWind (Tailwind CSS) for consistent styling across platforms",
+        "Custom useAppwrite hook for data fetching and query management",
+        "Relational database schema with menu, categories, and customizations"
+      ],
+      codeSnippet: "// Zustand cart store\nconst useCartStore = create((set) => ({\n  items: [],\n  addItem: (item) => set((state) => ({\n    items: [...state.items, item]\n  })),\n  removeItem: (id) => set((state) => ({\n    items: state.items.filter((i) => i.$id !== id)\n  })),\n  updateQuantity: (id, qty) => set((state) => ({\n    items: state.items.map((i) =>\n      i.$id === id ? { ...i, quantity: qty } : i\n    )\n  }))\n}));"
+    },
+    demonstrations: [
+      {
+        title: "Authentication Flow",
+        description: "Secure sign up and sign in with Appwrite: • User registers with email and password • Appwrite creates account and user document in database • JWT session stored and user fetched into Zustand auth store • Root index.tsx checks isAuthenticated and redirects accordingly • Auth layout redirects already authenticated users away from auth screens",
+        outcome: "Seamless authentication with persistent session management."
+      },
+      {
+        title: "Home & Search",
+        description: "Browse and discover food items: • Home screen displays offer cards (Summer Combo, Burger Bash, Pizza Party, Burrito Delight) • Tapping an offer navigates to filtered search results • Search screen supports real-time name search and category filtering • Menu cards display food images, prices, and ratings",
+        outcome: "Intuitive food discovery experience with fast filtering."
+      },
+      {
+        title: "Cart & Checkout",
+        description: "Full cart management experience: • Add any menu item to cart with one tap • Increase or decrease item quantity directly in cart • Remove items from cart • Payment summary shows subtotal, delivery fee, and discount • Zustand cart store keeps state in sync across all screens",
+        outcome: "Smooth cart experience with real-time price calculations."
+      }
+    ],
+    impact: {
+      metrics: [
+        { label: "Platforms", value: "iOS & Android" },
+        { label: "Navigation", value: "File-based Expo Router" },
+        { label: "State Management", value: "Zustand global stores" }
+      ],
+      outcomes: [
+        "Built cross-platform mobile app with React Native and Expo",
+        "Integrated Appwrite for full backend — auth, database, and storage",
+        "Implemented clean cart and order management with Zustand"
+      ]
+    },
+    githubUrl: "https://github.com/chouhanrahul1999/fast-food-app",
     liveUrl: null
   }
 ];

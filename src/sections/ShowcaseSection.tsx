@@ -211,23 +211,20 @@ const ShowcaseSection = () => {
           <div
             ref={rydeRef}
             className="first-project-wrapper cursor-pointer"
-            onClick={() => {
-              navigate("/project/betteruptime");
-            }}
+            onClick={() => navigate("/project/fast-food-app")}
           >
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
-                <img src="/images/react1.png" alt="Ryde App Interface" />
+                <img src="/images/food.png" alt="Fast Food App" />
               </div>
             </div>
             <div className="text-content">
               <h2 className="mb-4">
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Zentry <ProjectLinks githubUrl="#" />
+                Fast Food App - Mobile Food Ordering{" "}
+                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/fast-food-app" />
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
+                A full-stack mobile food ordering app built with React Native and Expo. Browse food categories, search menu items, manage your cart, and place orders — powered by Appwrite backend with Zustand state management.
               </p>
             </div>
           </div>

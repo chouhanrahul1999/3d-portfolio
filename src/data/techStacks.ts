@@ -63,3 +63,12 @@ export const betterUptimeTechStack = [
   { name: "Shadcn/UI", iconType: "SiShadcnui", color: "#000000" },
   { name: "Docker", iconType: "SiDocker", color: "#2496ED" }
 ];
+
+export const fastFoodTechStack = [
+  { name: "React Native", iconType: "FaReact", color: "#61DAFB" },
+  { name: "Expo", iconType: "SiExpo", color: "#FFFFFF" },
+  { name: "TypeScript", iconType: "SiTypescript", color: "#3178C6" },
+  { name: "Appwrite", iconType: "SiAppwrite", color: "#FD366E" },
+  { name: "NativeWind", iconType: "SiTailwindcss", color: "#06B6D4" },
+  { name: "Zustand", iconType: "SiZod", color: "#FF6B35" },
+];
