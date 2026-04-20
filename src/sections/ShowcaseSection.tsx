@@ -233,19 +233,20 @@ const ShowcaseSection = () => {
             <div
               className="project"
               ref={libraryRef}
-              onClick={() => {
-                navigate("/project/betteruptime");
-              }}
+              onClick={() => navigate("/project/movie-app")}
             >
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
                     src="/images/react2.png"
-                    alt="Library Management Platform"
+                    alt="Movie App"
                   />
                 </div>
               </div>
-              <h2>3d Landing page of Mackbook Model.</h2>
+              <h2>Movie App - Discover & Explore Movies</h2>
+              <p className="text-white-50 text-sm mt-2">
+                Discover trending & popular movies powered by TMDB API and Appwrite real-time backend.
+              </p>
             </div>
 
             <div

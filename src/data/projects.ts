@@ -1,4 +1,4 @@
-import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack, fastFoodTechStack } from './techStacks.js';
+import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack, fastFoodTechStack, movieAppTechStack } from './techStacks.js';
 
 export const projects = [
   {
@@ -619,6 +619,78 @@ export const projects = [
       ]
     },
     githubUrl: "https://github.com/chouhanrahul1999/fast-food-app",
+    liveUrl: null
+  },
+  {
+    id: "movie-app",
+    title: "Movie App - Discover & Explore Movies",
+    description: "A React Native mobile app that lets users discover, search, and explore movies. Tracks what movies users search for most and surfaces them as trending — powered by TMDB API and Appwrite real-time backend.",
+    image: "/images/react2.png",
+    techStack: movieAppTechStack,
+    features: [
+      {
+        title: "Trending Algorithm",
+        description: "Every search updates a count in Appwrite. The most searched movies bubble up to the trending section automatically",
+        icon: "FaFire"
+      },
+      {
+        title: "Debounced Search",
+        description: "Real-time search that queries the TMDB API as you type with debouncing for performance",
+        icon: "FaSearch"
+      },
+      {
+        title: "Movie Details",
+        description: "Full details page showing poster, rating, overview, genres, budget, revenue, and production companies",
+        icon: "FaFilm"
+      },
+      {
+        title: "Home Screen",
+        description: "Displays trending movies ranked by search popularity and a list of the latest popular movies",
+        icon: "FaHome"
+      }
+    ],
+    implementation: {
+      architecture: "React Native App with TMDB API & Appwrite Backend",
+      highlights: [
+        "TMDB API integration for popular movies, search, and full movie details",
+        "Appwrite database tracks search terms and counts for trending calculation",
+        "Debounced search input to minimize API calls while typing",
+        "File-based navigation with Expo Router",
+        "Generic useFetch hook for reusable data fetching across screens",
+        "Gradient ranking numbers on trending cards using masked-view"
+      ],
+      codeSnippet: "// Trending algorithm — update search count in Appwrite\nexport const updateSearchCount = async (searchTerm, movie) => {\n  const result = await databases.listDocuments(DATABASE_ID, COLLECTION_ID, [\n    Query.equal('searchTerm', searchTerm)\n  ]);\n\n  if (result.documents.length > 0) {\n    const doc = result.documents[0];\n    await databases.updateDocument(DATABASE_ID, COLLECTION_ID, doc.$id, {\n      count: doc.count + 1\n    });\n  } else {\n    await databases.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {\n      searchTerm, movie_id: movie.id,\n      title: movie.title,\n      poster_url: movie.poster_path,\n      count: 1\n    });\n  }\n};"
+    },
+    demonstrations: [
+      {
+        title: "Home & Trending",
+        description: "Home screen experience: • Fetches popular movies from TMDB API on load • Fetches top 5 trending movies from Appwrite ordered by count descending • Trending cards display gradient ranking numbers • Latest popular movies shown in a scrollable grid",
+        outcome: "Users instantly see what's trending based on real search activity."
+      },
+      {
+        title: "Search & Trending Algorithm",
+        description: "Real-time search with trending tracking: • Debounced input queries TMDB API as user types • Top result from each search is recorded in Appwrite with searchTerm and movie details • If same search term is used again, count increments • Top 5 most searched movies surface as trending on home screen",
+        outcome: "Organic trending powered by actual user search behavior."
+      },
+      {
+        title: "Movie Details",
+        description: "Full movie information page: • Tapping any movie card navigates to details screen • Fetches complete movie data from TMDB including poster, rating, overview, genres, budget, revenue, and production companies",
+        outcome: "Rich movie detail experience with comprehensive information."
+      }
+    ],
+    impact: {
+      metrics: [
+        { label: "Movie Database", value: "TMDB — 500k+ movies" },
+        { label: "Trending Update", value: "Real-time on every search" },
+        { label: "Platforms", value: "iOS & Android" }
+      ],
+      outcomes: [
+        "Built real-time trending algorithm using Appwrite search count tracking",
+        "Integrated TMDB API for comprehensive movie data and search",
+        "Implemented debounced search for smooth and efficient user experience"
+      ]
+    },
+    githubUrl: "https://github.com/chouhanrahul1999/movie-app",
     liveUrl: null
   }
 ];
