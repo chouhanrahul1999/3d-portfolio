@@ -207,7 +207,7 @@ const ShowcaseSection = () => {
 
         <TitleHeader title="My React-Native Projects" />
 
-        <div className="showcaselayout  ">
+        <div className="showcaselayout pb-24 ">
           <div
             ref={rydeRef}
             className="first-project-wrapper cursor-pointer"
@@ -293,21 +293,32 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div
               className="project"
-              ref={libraryRef}
-              onClick={() => navigate("/project/movie-app")}
+              ref={ycDirectoryRef}
             >
-              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
-                <div className="holographic-content">
-                  <img
-                    src="/images/soon.jpg"
-                    alt="Movie App"
-                  />
+              <div className="image-wrapper bg-black-100 holographic-card overflow-hidden relative">
+                {/* animated gradient orbs */}
+                <div className="absolute w-40 h-40 rounded-full bg-[#52aeff]/20 blur-3xl top-4 left-4 animate-pulse" />
+                <div className="absolute w-32 h-32 rounded-full bg-[#fd5c79]/20 blur-3xl bottom-4 right-4 animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute w-24 h-24 rounded-full bg-[#6d45ce]/20 blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse" style={{ animationDelay: '0.5s' }} />
+
+                {/* gradient border line */}
+                <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-[#62e0ff] to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#fd5c79] to-transparent" />
+
+                <div className="relative z-10 flex flex-col items-center justify-center gap-4 h-full">
+                  <div className="w-15 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl backdrop-blur-sm">
+                    ⚡
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#62e0ff] animate-pulse" />
+                    <span className="text-[#62e0ff] text-xs font-medium tracking-[0.2em] uppercase">Coming Soon</span>
+                  </div>
+                  <p className="text-white/30 text-xs text-center px-6 leading-relaxed">
+                    Next project in progress
+                  </p>
                 </div>
               </div>
-              <h2>Movie App - Discover & Explore Movies</h2>
-              <p className="text-white-50 text-sm mt-2">
-                Discover trending & popular movies powered by TMDB API and Appwrite real-time backend.
-              </p>
+              <h2>Coming soon ...</h2>
             </div>
 
             <div
@@ -325,7 +336,7 @@ const ShowcaseSection = () => {
                 <div className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-[#fd5c79] to-transparent" />
 
                 <div className="relative z-10 flex flex-col items-center justify-center gap-4 h-full">
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl backdrop-blur-sm">
+                  <div className="w-15 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl backdrop-blur-sm">
                     ⚡
                   </div>
                   <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
