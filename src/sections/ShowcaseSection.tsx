@@ -138,7 +138,7 @@ const ShowcaseSection = () => {
           </div>
         </div>
 
-        <TitleHeader title="My Full-Stack Project" />
+        <TitleHeader title="My Full-Stack Projects" />
 
         <div className="showcaselayout pb-24">
           <div
@@ -221,7 +221,7 @@ const ShowcaseSection = () => {
             <div className="text-content">
               <h2 className="mb-4">
                 Fast Food App - Mobile Food Ordering{" "}
-                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/fast-food-app" />
+                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/fast_food-app" />
               </h2>
               <p className="text-white-50 md:text-xl">
                 A full-stack mobile food ordering app built with React Native and Expo. Browse food categories, search menu items, manage your cart, and place orders — powered by Appwrite backend with Zustand state management.
@@ -243,7 +243,9 @@ const ShowcaseSection = () => {
                   />
                 </div>
               </div>
-              <h2>Movie App - Discover & Explore Movies</h2>
+              <h2>Movie App - Discover & Explore Movies
+                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/movie_booking-app" />
+              </h2>
               <p className="text-white-50 text-sm mt-2">
                 Discover trending & popular movies powered by TMDB API and Appwrite real-time backend.
               </p>
@@ -259,7 +261,7 @@ const ShowcaseSection = () => {
                   <img src="/images/react3.png" alt="ReState Real Estate App" />
                 </div>
               </div>
-              <h2>ReState - React Native Real Estate App</h2>
+              <h2>ReState - Real Estate App <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/native_real-state-app" /></h2>
               <p className="text-white-50 text-sm mt-2">
                 Browse property listings, view agent profiles, and manage your account with Google OAuth.
               </p>
