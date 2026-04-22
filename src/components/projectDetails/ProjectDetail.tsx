@@ -8,6 +8,7 @@ import ProjectDemonstration from "./ui/ProjectDemonstration";
 import ProjectImpact from "./ui/ProjectImpact";
 import ProjectCTA from "./ui/ProjectCTA";
 import Contact from "../../sections/Contact";
+import Footer from "../../sections/Footer";
 
 const ProjectDetail = ({ projects }: any) => {
   const { projectId } = useParams();
@@ -16,7 +17,6 @@ const ProjectDetail = ({ projects }: any) => {
     window.scrollTo(0, 0);
   }, [projectId]);
 
-
   const project = projects.find((p: any) => p.id === projectId);
 
   if (!project) {
@@ -24,7 +24,7 @@ const ProjectDetail = ({ projects }: any) => {
   }
 
   return (
-    <div className="w-full bg-[#000319] min-h-screen">
+    <div className="w-full bg-black min-h-screen">
       <ProjectHero project={project} />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <TechStack techStack={project.techStack} />
@@ -33,8 +33,9 @@ const ProjectDetail = ({ projects }: any) => {
         <ProjectDemonstration demonstrations={project.demonstrations} />
         <ProjectImpact impact={project.impact} />
         <ProjectCTA githubUrl={project.githubUrl} liveUrl={project.liveUrl} />
-        <Contact />
       </div>
+      <Contact />
+      <Footer />
     </div>
   );
 };

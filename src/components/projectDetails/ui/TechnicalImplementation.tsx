@@ -14,10 +14,10 @@ const TechnicalImplementation = ({ implementation }: any) => {
       <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
         {/* Architecture Section */}
         <div className="group relative">
-          <div className="absolute -inset-0.5 bg-linear-to-r from-[#CBACF9]/10 to-[#38BDF8]/10 rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
-          <div className="relative bg-linear-to-br from-[#0C0E23] to-[#161A31] border border-[#363749] rounded-lg sm:rounded-xl p-4 sm:p-6 lg:p-8 h-full hover:border-[#CBACF9]/20 transition-all duration-300 w-full">
+          <div className="absolute -inset-0.5 bg-linear-to-r from-[#62e0ff]/10 to-[#6d45ce]/10 rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
+          <div className="relative bg-black-100 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 lg:p-8 h-full hover:border-[#62e0ff]/20 transition-all duration-300 w-full">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-linear-to-br from-[#CBACF9]/60 to-[#38BDF8]/60 rounded-lg flex items-center justify-center shadow-sm shadow-[#CBACF9]/10">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-linear-to-br from-[#62e0ff]/60 to-[#52aeff]/60 rounded-lg flex items-center justify-center shadow-sm shadow-[#62e0ff]/10">
                 <Layers size={16} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white">
@@ -28,10 +28,10 @@ const TechnicalImplementation = ({ implementation }: any) => {
             {/* Architecture Title Card */}
             <div className="relative mb-4 sm:mb-6">
               <div className="absolute -inset-0.5 bg-linear-to-r from-[#CBACF9]/15 to-[#38BDF8]/15 rounded-lg blur opacity-30"></div>
-              <div className="relative bg-linear-to-r from-[#0F1419] to-[#1A1B3A] border border-[#CBACF9]/15 rounded-lg p-3 sm:p-4">
+              <div className="relative bg-black-200 border border-[#62e0ff]/15 rounded-lg p-3 sm:p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-1.5 h-1.5 bg-[#CBACF9]/70 rounded-full animate-pulse shrink-0"></div>
-                  <span className="text-[#CBACF9]/80 text-[10px] sm:text-xs font-medium uppercase tracking-wide">
+                  <div className="w-1.5 h-1.5 bg-[#62e0ff]/70 rounded-full animate-pulse shrink-0"></div>
+                  <span className="text-[#62e0ff]/80 text-[10px] sm:text-xs font-medium uppercase tracking-wide">
                     System Design
                   </span>
                 </div>
@@ -43,14 +43,14 @@ const TechnicalImplementation = ({ implementation }: any) => {
 
             {/* Key Highlights */}
             <div className="w-full">
-              <h4 className="text-[#CBACF9]/80 font-medium text-xs uppercase tracking-wide mb-3 sm:mb-4">
+              <h4 className="text-[#62e0ff]/80 font-medium text-xs uppercase tracking-wide mb-3 sm:mb-4">
                 Key Highlights
               </h4>
               <div className="space-y-2 sm:space-y-3">
                 {implementation?.highlights.map((highlight: any, index: any) => (
                   <div key={index} className="group/item">
-                    <div className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg bg-linear-to-r from-white/5 to-white/8 border border-white/8 hover:border-[#CBACF9]/15 transition-all duration-300">
-                      <div className="shrink-0 w-5 h-5 bg-linear-to-br from-[#CBACF9]/70 to-[#38BDF8]/70 rounded-full flex items-center justify-center mt-0.5 sm:mt-1">
+                    <div className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg bg-white/5 border border-white/8 hover:border-[#62e0ff]/15 transition-all duration-300">
+                      <div className="shrink-0 w-5 h-5 bg-linear-to-br from-[#62e0ff]/70 to-[#52aeff]/70 rounded-full flex items-center justify-center mt-0.5 sm:mt-1">
                         <span className="text-white text-xs font-semibold">
                           {index + 1}
                         </span>
@@ -68,10 +68,10 @@ const TechnicalImplementation = ({ implementation }: any) => {
 
         {/* Code Snippet Section */}
         <div className="group relative">
-          <div className="absolute -inset-0.5 bg-linear-to-r from-[#38BDF8]/10 to-[#CBACF9]/10 rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
-          <div className="relative bg-linear-to-br from-[#0C0E23] to-[#161A31] border border-[#363749] rounded-lg sm:rounded-xl p-4 sm:p-6 lg:p-8 h-full hover:border-[#38BDF8]/20 transition-all duration-300 w-full">
+          <div className="absolute -inset-0.5 bg-linear-to-r from-[#52aeff]/10 to-[#62e0ff]/10 rounded-xl blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
+          <div className="relative bg-black-100 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 lg:p-8 h-full hover:border-[#52aeff]/20 transition-all duration-300 w-full">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-linear-to-br from-[#38BDF8]/60 to-[#CBACF9]/60 rounded-lg flex items-center justify-center shadow-sm shadow-[#38BDF8]/10">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-linear-to-br from-[#52aeff]/60 to-[#62e0ff]/60 rounded-lg flex items-center justify-center shadow-sm shadow-[#52aeff]/10">
                 <Terminal size={16} className="text-white" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white">
@@ -82,10 +82,10 @@ const TechnicalImplementation = ({ implementation }: any) => {
             {/* Code Title Card */}
             <div className="relative mb-4 sm:mb-6">
               <div className="absolute -inset-0.5 bg-linear-to-r from-[#38BDF8]/15 to-[#CBACF9]/15 rounded-lg blur opacity-30"></div>
-              <div className="relative bg-linear-to-r from-[#0F1419] to-[#1A1B3A] border border-[#38BDF8]/15 rounded-lg p-3 sm:p-4">
+              <div className="relative bg-black-200 border border-[#52aeff]/15 rounded-lg p-3 sm:p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-1.5 h-1.5 bg-[#38BDF8]/70 rounded-full animate-pulse shrink-0"></div>
-                  <span className="text-[#38BDF8]/80 text-[10px] sm:text-xs font-medium uppercase tracking-wide">
+                  <div className="w-1.5 h-1.5 bg-[#52aeff]/70 rounded-full animate-pulse shrink-0"></div>
+                  <span className="text-[#52aeff]/80 text-[10px] sm:text-xs font-medium uppercase tracking-wide">
                     Implementation
                   </span>
                 </div>
@@ -97,11 +97,11 @@ const TechnicalImplementation = ({ implementation }: any) => {
 
             {/* Code Block */}
             <div className="w-full">
-              <h4 className="text-[#38BDF8]/80 font-medium text-xs uppercase tracking-wide mb-3 sm:mb-4">
+              <h4 className="text-[#52aeff]/80 font-medium text-xs uppercase tracking-wide mb-3 sm:mb-4">
                 Code Example
               </h4>
-              <div className="bg-[#0A0A0A] border border-[#363749] rounded-lg overflow-hidden w-full">
-                <div className="bg-linear-to-r from-[#1a1a1a] to-[#2a2a2a] px-3 sm:px-4 py-2 border-b border-[#363749]">
+              <div className="bg-black border border-white/10 rounded-lg overflow-hidden w-full">
+                <div className="bg-black-200 px-3 sm:px-4 py-2 border-b border-white/10">
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#EF4444]/70 rounded-full shrink-0"></div>
                     <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#F59E0B]/70 rounded-full shrink-0"></div>

@@ -41,8 +41,8 @@ const TechStack = ({ techStack }: any) => {
           const IconComponent = iconMap[tech.iconType as keyof typeof iconMap];
           return (
             <div key={index} className="group relative">
-              <div className="absolute -inset-0.5 bg-linear-to-r from-[#CBACF9] to-[#38BDF8] rounded-xl blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
-              <div className="relative bg-[#0C0E23] border border-[#363749] rounded-lg sm:rounded-xl p-4 sm:p-6 text-center hover:border-[#CBACF9]/50 transition-all duration-300">
+              <div className="absolute -inset-0.5 bg-linear-to-r from-[#62e0ff] to-[#6d45ce] rounded-xl blur opacity-0 group-hover:opacity-30 transition duration-300"></div>
+              <div className="relative bg-black-100 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 text-center hover:border-[#62e0ff]/30 transition-all duration-300">
                 <div className="mb-3 sm:mb-4 flex justify-center">
                   {IconComponent && <IconComponent size={24} color={tech.color} className="sm:text-3xl lg:text-4xl" />}
                 </div>
