@@ -1,4 +1,4 @@
-import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack, fastFoodTechStack, movieAppTechStack, realStateTechStack } from './techStacks.js';
+import { crtdTechStack, zapierTechStack, excelidrawTechStack, digitalWalletTechStack, brainlyTechStack, betterUptimeTechStack, fastFoodTechStack, movieAppTechStack, realStateTechStack, dentwiseTechStack } from './techStacks.js';
 
 export const projects = [
   {
@@ -763,6 +763,80 @@ export const projects = [
       ]
     },
     githubUrl: "https://github.com/chouhanrahul1999/restate",
+    liveUrl: null
+  },
+  {
+    id: "dentwise",
+    title: "DentWise — AI-Powered Dental Care Platform",
+    description: "A full-stack dental appointment booking platform with an integrated AI voice assistant. Book appointments with verified dentists, get real-time dental guidance through AI voice calls powered by Vapi, and manage your dental health — built with Next.js, Clerk, Neon PostgreSQL, and Resend.",
+    image: "/images/dentwise1.png",
+    techStack: dentwiseTechStack,
+    features: [
+      {
+        title: "AI Voice Assistant",
+        description: "Talk to an AI dental assistant powered by Vapi for real-time dental advice and symptom assessment (Pro plan)",
+        icon: "FaMicrophone"
+      },
+      {
+        title: "Appointment Booking",
+        description: "Browse verified dentists, pick a date and time, and book in 3 simple steps with real-time slot filtering",
+        icon: "FaCalendarAlt"
+      },
+      {
+        title: "Email Confirmations",
+        description: "Automated appointment confirmation emails sent via Resend with React Email templates",
+        icon: "FaEnvelope"
+      },
+      {
+        title: "Subscription Plans",
+        description: "Free, AI Basic ($9/mo), and AI Pro ($19/mo) tiers managed through Clerk's billing system",
+        icon: "FaCreditCard"
+      }
+    ],
+    implementation: {
+      architecture: "Next.js Full-Stack App with AI Voice & Serverless PostgreSQL",
+      highlights: [
+        "Clerk authentication with social login and automatic user sync to PostgreSQL via server actions",
+        "3-step booking wizard with real-time slot filtering using TanStack Query",
+        "Vapi AI voice assistant for real-time dental guidance with live transcript display",
+        "Resend + React Email for automated appointment confirmation emails",
+        "Neon serverless PostgreSQL with Prisma ORM and @prisma/adapter-neon",
+        "Admin panel for managing doctors and toggling appointment statuses",
+        "Recharts for dental health dashboard visualizations",
+        "React Hook Form + Zod for type-safe form validation"
+      ],
+      codeSnippet: "// Sync Clerk user to PostgreSQL on sign-up\nexport async function syncUser() {\n  const { userId } = await auth();\n  const clerkUser = await clerkClient.users.getUser(userId);\n\n  await prisma.user.upsert({\n    where: { clerkId: userId },\n    update: {\n      email: clerkUser.emailAddresses[0].emailAddress,\n      name: `${clerkUser.firstName} ${clerkUser.lastName}`,\n    },\n    create: {\n      clerkId: userId,\n      email: clerkUser.emailAddresses[0].emailAddress,\n      name: `${clerkUser.firstName} ${clerkUser.lastName}`,\n    }\n  });\n}"
+    },
+    demonstrations: [
+      {
+        title: "Authentication & Dashboard",
+        description: "Secure onboarding and user dashboard: • User signs up via Clerk with email or social login • syncUser server action automatically creates user record in PostgreSQL • Dashboard shows upcoming appointments, dental health charts via Recharts • Quick action buttons for booking and viewing history",
+        outcome: "Seamless authentication with a rich personalized dashboard."
+      },
+      {
+        title: "3-Step Appointment Booking",
+        description: "Guided booking flow: • Step 1: Browse and select a verified dentist • Step 2: Pick a date and time slot — already booked slots filtered out in real-time • Step 3: Review and confirm booking • On confirmation, appointment saved to database and confirmation email sent via Resend",
+        outcome: "Frictionless booking with real-time availability and instant email confirmation."
+      },
+      {
+        title: "AI Voice Assistant",
+        description: "Pro plan AI dental guidance: • Pro users access the AI voice assistant at /voice • Vapi starts a real-time voice call with an AI dental assistant • Assistant answers dental questions, assesses symptoms, and provides guidance • Live conversation transcript displayed on screen during the call",
+        outcome: "Real-time AI dental guidance through natural voice conversation."
+      }
+    ],
+    impact: {
+      metrics: [
+        { label: "AI Response", value: "Real-time voice" },
+        { label: "Email Delivery", value: "Automated via Resend" },
+        { label: "Plans", value: "Free / $9 / $19 per month" }
+      ],
+      outcomes: [
+        "Integrated Vapi AI voice assistant for real-time dental guidance",
+        "Built 3-step booking wizard with real-time slot filtering using TanStack Query",
+        "Automated email confirmations with React Email templates via Resend"
+      ]
+    },
+    githubUrl: "https://github.com/chouhanrahul1999/dentwise-app",
     liveUrl: null
   }
 ];

@@ -89,3 +89,13 @@ export const realStateTechStack = [
   { name: "Appwrite", iconType: "SiAppwrite", color: "#FD366E" },
   { name: "NativeWind", iconType: "SiTailwindcss", color: "#06B6D4" },
 ];
+
+export const dentwiseTechStack = [
+  { name: "Next.js", iconType: "RiNextjsFill", color: "#FFFFFF" },
+  { name: "TypeScript", iconType: "SiTypescript", color: "#3178C6" },
+  { name: "Tailwind CSS", iconType: "SiTailwindcss", color: "#06B6D4" },
+  { name: "Clerk", iconType: "SiClerk", color: "#6C47FF" },
+  { name: "Prisma ORM", iconType: "SiPrisma", color: "#5A67D8" },
+  { name: "PostgreSQL", iconType: "SiPostgresql", color: "#336791" },
+  { name: "Shadcn/UI", iconType: "SiShadcnui", color: "#000000" },
+];

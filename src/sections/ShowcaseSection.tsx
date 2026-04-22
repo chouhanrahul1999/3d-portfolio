@@ -274,20 +274,20 @@ const ShowcaseSection = () => {
           <div
             ref={rydeRef}
             className="first-project-wrapper cursor-pointer"
-            onClick={() => navigate("/project/fast-food-app")}
+            onClick={() => navigate("/project/dentwise")}
           >
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
-                <img src="/images/dentwise1.png" alt="Fast Food App" />
+                <img src="/images/dentwise1.png" alt="DentWise AI Dental Platform" />
               </div>
             </div>
             <div className="text-content">
               <h2 className="mb-4">
-                Fast Food App - Mobile Food Ordering{" "}
-                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/fast-food-app" />
+                DentWise — AI-Powered Dental Care Platform{" "}
+                <ProjectLinks githubUrl="https://github.com/chouhanrahul1999/dentwise-app" />
               </h2>
               <p className="text-white-50 md:text-xl">
-                A full-stack mobile food ordering app built with React Native and Expo. Browse food categories, search menu items, manage your cart, and place orders — powered by Appwrite backend with Zustand state management.
+                A full-stack dental appointment booking platform with an integrated AI voice assistant. Book appointments with verified dentists, get real-time dental guidance through AI voice calls powered by Vapi, and manage your dental health — built with Next.js, Clerk, Neon PostgreSQL, and Resend.
               </p>
             </div>
           </div>
