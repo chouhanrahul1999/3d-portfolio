@@ -555,6 +555,7 @@ export const projects = [
     description: "A full-stack mobile food ordering app built with React Native and Expo. Users can browse food categories, search menu items, customize orders, manage their cart, and place orders — all with a clean and modern UI.",
     image: "/images/food.png",
     techStack: fastFoodTechStack,
+
     features: [
       {
         title: "Authentication",
@@ -592,16 +593,32 @@ export const projects = [
     demonstrations: [
       {
         title: "Authentication Flow",
+
+        dashboardImages: [
+          '/screenshots/food-app5.jpg',
+          '/screenshots/food-app1.jpg',
+          '/screenshots/food-app5.jpg',
+          '/screenshots/food-app1.jpg',
+        ],
         description: "Secure sign up and sign in with Appwrite: • User registers with email and password • Appwrite creates account and user document in database • JWT session stored and user fetched into Zustand auth store • Root index.tsx checks isAuthenticated and redirects accordingly • Auth layout redirects already authenticated users away from auth screens",
         outcome: "Seamless authentication with persistent session management."
       },
       {
         title: "Home & Search",
+        dashboardImages: [
+          '/screenshots/food-app5.jpg',
+          '/screenshots/food-app1.jpg',
+          '/screenshots/food-app2.jpg',
+        ],
         description: "Browse and discover food items: • Home screen displays offer cards (Summer Combo, Burger Bash, Pizza Party, Burrito Delight) • Tapping an offer navigates to filtered search results • Search screen supports real-time name search and category filtering • Menu cards display food images, prices, and ratings",
         outcome: "Intuitive food discovery experience with fast filtering."
       },
       {
         title: "Cart & Checkout",
+        dashboardImages: [
+          '/screenshots/food-app3.jpg',
+          '/screenshots/food-app4.jpg',
+        ],
         description: "Full cart management experience: • Add any menu item to cart with one tap • Increase or decrease item quantity directly in cart • Remove items from cart • Payment summary shows subtotal, delivery fee, and discount • Zustand cart store keeps state in sync across all screens",
         outcome: "Smooth cart experience with real-time price calculations."
       }
