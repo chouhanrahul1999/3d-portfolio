@@ -553,7 +553,7 @@ export const projects = [
     id: "fast-food-app",
     title: "Fast Food App - Mobile Food Ordering",
     description: "A full-stack mobile food ordering app built with React Native and Expo. Users can browse food categories, search menu items, customize orders, manage their cart, and place orders — all with a clean and modern UI.",
-    image: "/images/food.png",
+    image: "/screenshots/food-cover.png",
     techStack: fastFoodTechStack,
 
     features: [
@@ -596,8 +596,7 @@ export const projects = [
 
         dashboardImages: [
           '/screenshots/food-app5.jpg',
-          '/screenshots/food-app1.jpg',
-          '/screenshots/food-app5.jpg',
+          '/screenshots/food-app9.png',
           '/screenshots/food-app1.jpg',
         ],
         description: "Secure sign up and sign in with Appwrite: • User registers with email and password • Appwrite creates account and user document in database • JWT session stored and user fetched into Zustand auth store • Root index.tsx checks isAuthenticated and redirects accordingly • Auth layout redirects already authenticated users away from auth screens",
@@ -606,9 +605,9 @@ export const projects = [
       {
         title: "Home & Search",
         dashboardImages: [
-          '/screenshots/food-app5.jpg',
-          '/screenshots/food-app1.jpg',
+          '/screenshots/food-app6.png',
           '/screenshots/food-app2.jpg',
+          '/screenshots/food-app-9.png',
         ],
         description: "Browse and discover food items: • Home screen displays offer cards (Summer Combo, Burger Bash, Pizza Party, Burrito Delight) • Tapping an offer navigates to filtered search results • Search screen supports real-time name search and category filtering • Menu cards display food images, prices, and ratings",
         outcome: "Intuitive food discovery experience with fast filtering."
@@ -617,6 +616,7 @@ export const projects = [
         title: "Cart & Checkout",
         dashboardImages: [
           '/screenshots/food-app3.jpg',
+          '/screenshots/food-app7.png',
           '/screenshots/food-app4.jpg',
         ],
         description: "Full cart management experience: • Add any menu item to cart with one tap • Increase or decrease item quantity directly in cart • Remove items from cart • Payment summary shows subtotal, delivery fee, and discount • Zustand cart store keeps state in sync across all screens",
@@ -642,7 +642,7 @@ export const projects = [
     id: "movie-app",
     title: "Movie App - Discover & Explore Movies",
     description: "A React Native mobile app that lets users discover, search, and explore movies. Tracks what movies users search for most and surfaces them as trending — powered by TMDB API and Appwrite real-time backend.",
-    image: "/images/react2.png",
+    image: "/images/Cover.png",
     techStack: movieAppTechStack,
     features: [
       {
@@ -681,16 +681,32 @@ export const projects = [
     demonstrations: [
       {
         title: "Home & Trending",
+        dashboardImages: [
+          '/screenshots/movie-app1.jpg',
+          '/screenshots/movie-app1.jpg',
+
+        ],
         description: "Home screen experience: • Fetches popular movies from TMDB API on load • Fetches top 5 trending movies from Appwrite ordered by count descending • Trending cards display gradient ranking numbers • Latest popular movies shown in a scrollable grid",
         outcome: "Users instantly see what's trending based on real search activity."
       },
       {
         title: "Search & Trending Algorithm",
+        dashboardImages: [
+          '/screenshots/movie-app2.jpg',
+          '/screenshots/movie-app3.png',
+
+        ],
         description: "Real-time search with trending tracking: • Debounced input queries TMDB API as user types • Top result from each search is recorded in Appwrite with searchTerm and movie details • If same search term is used again, count increments • Top 5 most searched movies surface as trending on home screen",
         outcome: "Organic trending powered by actual user search behavior."
       },
       {
         title: "Movie Details",
+        dashboardImages: [
+          '/screenshots/movie-app4.png',
+          '/screenshots/movie-app4.png',
+
+
+        ],
         description: "Full movie information page: • Tapping any movie card navigates to details screen • Fetches complete movie data from TMDB including poster, rating, overview, genres, budget, revenue, and production companies",
         outcome: "Rich movie detail experience with comprehensive information."
       }
@@ -707,7 +723,7 @@ export const projects = [
         "Implemented debounced search for smooth and efficient user experience"
       ]
     },
-    githubUrl: "https://github.com/chouhanrahul1999/movie-app",
+    githubUrl: "https://github.com/chouhanrahul1999/movie_booking-app",
     liveUrl: null
   },
   {

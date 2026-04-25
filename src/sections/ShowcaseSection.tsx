@@ -215,7 +215,7 @@ const ShowcaseSection = () => {
           >
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
-                <img src="/images/food.png" alt="Fast Food App" />
+                <img src="/screenshots/food-app.png" alt="Fast Food App" />
               </div>
             </div>
             <div className="text-content">

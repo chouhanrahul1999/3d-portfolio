@@ -1,4 +1,4 @@
-import { FaNodeJs, FaReact, FaPython, FaDocker, FaAws } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaPython, FaDocker, FaAws, FaServer, FaMobile } from "react-icons/fa";
 import { SiMongodb, SiPrisma, SiTurborepo, SiTypescript, SiExpress, SiPostgresql, SiJavascript, SiTailwindcss, SiRedux, SiRedis, SiDocker, SiApachekafka, SiShadcnui, SiWebstorm } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -8,6 +8,8 @@ const iconMap = {
   FaPython,
   FaDocker,
   FaAws,
+  FaServer,
+  FaMobile,
   SiMongodb,
   SiExpress,
   SiPostgresql,
