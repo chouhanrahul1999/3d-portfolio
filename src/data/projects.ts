@@ -705,7 +705,6 @@ export const projects = [
           '/screenshots/movie-app4.png',
           '/screenshots/movie-app4.png',
 
-
         ],
         description: "Full movie information page: • Tapping any movie card navigates to details screen • Fetches complete movie data from TMDB including poster, rating, overview, genres, budget, revenue, and production companies",
         outcome: "Rich movie detail experience with comprehensive information."
@@ -730,7 +729,7 @@ export const projects = [
     id: "restate",
     title: "ReState - React Native Real Estate App",
     description: "A full-stack mobile real estate app built with React Native and Appwrite. Browse property listings, view detailed property info, explore agent profiles, and manage your account — with Google OAuth authentication.",
-    image: "/images/react3.png",
+    image: "/screenshots/real-cover.png",
     techStack: realStateTechStack,
     features: [
       {
@@ -769,16 +768,36 @@ export const projects = [
     demonstrations: [
       {
         title: "Google OAuth & Home Feed",
+        dashboardImages: [
+          '/screenshots/real-state1.png',
+          '/screenshots/real-state2.png',
+
+        ],
         description: "Authentication and home experience: • User taps sign in and is redirected to Google OAuth via Appwrite • On success, session is stored and GlobalProvider exposes user state • Home feed loads 5 featured properties and 6 recommended in a grid • Real-time search and category filter tabs update listings instantly",
         outcome: "Seamless Google sign-in with a rich property browsing experience."
       },
       {
         title: "Explore & Property Details",
+        dashboardImages: [
+          '/screenshots/real-state7.jpg',
+          '/screenshots/real-state8.jpg',
+          '/screenshots/real-state10.jpg',
+          '/screenshots/real-state3.png',
+
+          '/screenshots/real-state12.jpg',
+
+        ],
         description: "Search and detailed property view: • Explore page searches and filters all properties by type • Tapping a card navigates to /properties/[id] • Details page fetches full property, gallery images, reviews, and agent info in parallel • Displays facilities, bedrooms, bathrooms, price, area, and location",
         outcome: "Complete property discovery with rich detail pages."
       },
       {
         title: "Agent Profiles & User Account",
+         dashboardImages: [
+
+          '/screenshots/real-state11.jpg',
+          '/screenshots/real-state9.jpg',
+
+        ],
         description: "Agent and profile management: • Each property links to an agent with name, email, and avatar • Profile screen shows logged-in user info, bookings, payments, and settings • Logout clears Appwrite session and redirects to sign-in screen",
         outcome: "Full account management with agent transparency."
       }
