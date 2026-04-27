@@ -823,6 +823,14 @@ export const projects = [
     description: "A full-stack dental appointment booking platform with an integrated AI voice assistant. Book appointments with verified dentists, get real-time dental guidance through AI voice calls powered by Vapi, and manage your dental health — built with Next.js, Clerk, Neon PostgreSQL, and Resend.",
     image: "/images/dentwise1.png",
     techStack: dentwiseTechStack,
+    carouselImages: [
+      '/images/dent1.png',
+      '/images/dent2.png',
+      '/images/dent3.png',
+      '/images/dent4.png',
+      '/images/dent5.png',
+
+    ],
     features: [
       {
         title: "AI Voice Assistant",
@@ -862,16 +870,39 @@ export const projects = [
     demonstrations: [
       {
         title: "Authentication & Dashboard",
+        dashboardImages: [
+
+          '/screenshots/dent-1.png',
+          '/screenshots/dent-2.png',
+          '/screenshots/dent-3.png',
+
+        ],
         description: "Secure onboarding and user dashboard: • User signs up via Clerk with email or social login • syncUser server action automatically creates user record in PostgreSQL • Dashboard shows upcoming appointments, dental health charts via Recharts • Quick action buttons for booking and viewing history",
         outcome: "Seamless authentication with a rich personalized dashboard."
       },
       {
         title: "3-Step Appointment Booking",
+        dashboardImages: [
+
+          '/screenshots/dent-4.png',
+          '/screenshots/dent-5.png',
+          '/screenshots/dent-6.png',
+          '/screenshots/dent-7.png',
+          '/screenshots/dent-8.png',
+          '/screenshots/dent-9.png',
+
+        ],
         description: "Guided booking flow: • Step 1: Browse and select a verified dentist • Step 2: Pick a date and time slot — already booked slots filtered out in real-time • Step 3: Review and confirm booking • On confirmation, appointment saved to database and confirmation email sent via Resend",
         outcome: "Frictionless booking with real-time availability and instant email confirmation."
       },
       {
         title: "AI Voice Assistant",
+        dashboardImages: [
+
+          '/screenshots/dent10.png',
+          '/screenshots/dent11.png',
+
+        ],
         description: "Pro plan AI dental guidance: • Pro users access the AI voice assistant at /voice • Vapi starts a real-time voice call with an AI dental assistant • Assistant answers dental questions, assesses symptoms, and provides guidance • Live conversation transcript displayed on screen during the call",
         outcome: "Real-time AI dental guidance through natural voice conversation."
       }
