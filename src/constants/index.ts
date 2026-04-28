@@ -29,9 +29,9 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 7, suffix: "+", label: "Satisfied Clients" },
+  { value: 32, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
@@ -146,8 +146,21 @@ const techStackIcons = [
 ];
 
 const expCards = [
+
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+    review: "Rahul’s contributions to Wyreflow techonology have been outstanding. He approaches challenges with a problem-solving mindset.",
+    imgPath: "/images/wyreflow2.png",
+    logoPath: "/images/wyreflowlog.png",
+    title: "Full Stack Developer",
+    date: "June 2025 - Present",
+    responsibilities: [
+      "Led the development team of wyreflow technology.",
+      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
+      "Managed and maintained the CI/CD pipeline using DevOps practices to streamline deployments and improve release efficiency.",
+    ],
+  },
+  {
+    review: "This is a personal project where I applied my frontend development skills, building responsive and performant web interfaces using modern technologies.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
     title: "Frontend Developer",
@@ -159,19 +172,7 @@ const expCards = [
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
-    responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
-  },
-  {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+    review: "This is a personal project where I developed cross-platform mobile applications using React Native, focusing on smooth user experience and clean architecture.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
     title: "React Native Developer",

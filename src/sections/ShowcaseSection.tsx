@@ -357,7 +357,9 @@ const ShowcaseSection = () => {
 
         <div className="w-full pt-24  flex justify-center">
           <div className="min-w-2xs md:min-w-sm">
-            <Button className=" " text="View all Projects" onClick={() => {}} />
+            <Button className=" " text="View all Projects" onClick={() => {
+              window.open("https://github.com/chouhanrahul1999?tab=repositories")
+            }} />
           </div>
         </div>
       </div>
