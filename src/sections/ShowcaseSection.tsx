@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import TitleHeader from "../components/TitleHeader";
 import ProjectLinks from "../components/ProjectLinks";
 import "../styles/holographic-cards.css";
-import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
