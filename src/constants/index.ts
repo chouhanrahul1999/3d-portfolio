@@ -176,11 +176,23 @@ const expCards = [
     imgPath: "/images/native-logo2.png",
     logoPath: "/images/expo-logo.png",
     title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    date: "March 2025",
     responsibilities: [
       "Built a cross-platform food ordering app with React Native, Expo, and Appwrite with cart and auth.",
       "Developed a movie discovery app with real-time trending algorithm using TMDB API and Appwrite.",
       "Created a real estate app with Google OAuth, property listings, and agent profiles using Expo Router.",
+    ],
+  },
+  {
+    review: "This is a personal project where I built full-stack applications with modern backend architecture, real-time features, and scalable infrastructure.",
+    imgPath: "/images/nextjs2.png",
+    logoPath: "/images/nextjs-logo1.png",
+    title: "Full Stack Developer Projects",
+    date: "2025 - Present",
+    responsibilities: [
+      "Built BetterUptime — a microservices monitoring app with Redis Streams, Kafka, and multi-channel alerts.",
+      "Developed Excelidraw — a real-time collaborative whiteboard with WebSocket sync and PostgreSQL persistence.",
+      "Created DentWise — an AI-powered dental platform with Vapi voice assistant, Clerk auth, and Resend emails.",
     ],
   },
 ];
