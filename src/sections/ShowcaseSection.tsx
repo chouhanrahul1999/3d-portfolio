@@ -140,7 +140,7 @@ const ShowcaseSection = () => {
 
         <TitleHeader title="My Full-Stack Projects" />
 
-        <div className="showcaselayout pb-24">
+        <div className="showcaselayout pb-36">
           <div
             ref={rydeRef}
             className="first-project-wrapper cursor-pointer"
@@ -207,7 +207,7 @@ const ShowcaseSection = () => {
 
         <TitleHeader title="My React-Native Projects" />
 
-        <div className="showcaselayout pb-24 ">
+        <div className="showcaselayout pb-36 ">
           <div
             ref={rydeRef}
             className="first-project-wrapper cursor-pointer"
@@ -355,13 +355,13 @@ const ShowcaseSection = () => {
           </div>
         </div>
 
-        <div className="w-full pt-24  flex justify-center">
+        {/* <div className="w-full pt-24  flex justify-center">
           <div className="min-w-2xs md:min-w-sm">
             <Button className=" " text="View all Projects" onClick={() => {
               window.open("https://github.com/chouhanrahul1999?tab=repositories")
             }} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
