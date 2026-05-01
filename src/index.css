@@ -165,7 +165,7 @@ section {
       @apply h-full flex flex-col justify-between xl:w-[60%];
 
       .image-wrapper {
-        @apply xl:h-[70vh] md:h-[50vh]  h-[40vh] relative;
+        @apply xl:h-[70vh] md:h-[50vh] h-[30vh] relative;
 
         img {
           @apply w-full h-full object-cover rounded-xl absolute inset-0;
@@ -207,7 +207,7 @@ section {
   }
 
   .cta-button {
-    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    @apply px-3 py-3 md:px-4 md:py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2

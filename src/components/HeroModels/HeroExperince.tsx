@@ -11,14 +11,13 @@ import * as THREE from "three";
 
 const HeroExperince = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px" });
-  const isTablet = useMediaQuery({ query: "(max-width: 1024x" });
   const screensRef = useRef<THREE.Mesh>(null);
 
   return (
     <Canvas camera={{ position: [0, 3, 15], fov: 43 }}>
       <OrbitControls
         enablePan={false}
-        enableZoom={!isTablet}
+        enableZoom={false}
         maxDistance={20}
         minDistance={5}
         minPolarAngle={Math.PI / 5}
