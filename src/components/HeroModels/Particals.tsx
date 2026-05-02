@@ -4,6 +4,7 @@ import * as THREE from "three";
 
 const Particles = ({ count = 200 }) => {
   const mesh = useRef<THREE.Points>(null);
+  let frame = 0;
 
   const particles = useMemo(() => {
     const temp = [];
@@ -20,25 +21,29 @@ const Particles = ({ count = 200 }) => {
     return temp;
   }, [count]);
 
+  const positions = useMemo(() => {
+    const arr = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      arr[i * 3] = p.position[0];
+      arr[i * 3 + 1] = p.position[1];
+      arr[i * 3 + 2] = p.position[2];
+    });
+    return arr;
+  }, [particles, count]);
+
   useFrame(() => {
+    frame++;
+    if (frame % 2 !== 0) return; // update every other frame
     if (!mesh.current) return;
-    const positions = mesh.current.geometry.attributes.position.array;
+    const pos = mesh.current.geometry.attributes.position.array as Float32Array;
     for (let i = 0; i < count; i++) {
-      let y = positions[i * 3 + 1];
+      let y = pos[i * 3 + 1];
       y -= particles[i].speed;
       if (y < -2) y = Math.random() * 10 + 5;
-      positions[i * 3 + 1] = y;
+      pos[i * 3 + 1] = y;
     }
     mesh.current.geometry.attributes.position.needsUpdate = true;
   });
-
-  const positions = new Float32Array(count * 3);
-  particles.forEach((p, i) => {
-    positions[i * 3] = p.position[0];
-    positions[i * 3 + 1] = p.position[1];
-    positions[i * 3 + 2] = p.position[2];
-  });
-
   return (
     <points ref={mesh}>
       <bufferGeometry>

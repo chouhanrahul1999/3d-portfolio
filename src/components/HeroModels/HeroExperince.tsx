@@ -10,22 +10,23 @@ import { useRef } from "react";
 import * as THREE from "three";
 
 const HeroExperince = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const screensRef = useRef<THREE.Mesh>(null);
 
   return (
-    <Canvas camera={{ position: [0, 3, 15], fov: 43 }}>
+    <Canvas frameloop="demand" performance={{ min: 0.5 }} camera={{ position: isMobile ? [0, 2, 18] : [0, 2, 15], fov: 43 }}>
       <OrbitControls
         enablePan={false}
         enableZoom={false}
+        enableRotate={true}
+        minPolarAngle={isMobile ? Math.PI / 2 : Math.PI / 5}
+        maxPolarAngle={isMobile ? Math.PI / 2 : Math.PI / 2}
         maxDistance={20}
         minDistance={5}
-        minPolarAngle={Math.PI / 5}
-        maxPolarAngle={Math.PI / 2}
       />
       <HeroLight />
 
-      <Particles count={100} />
+      <Particles count={50} />
       <group
         scale={isMobile ? 0.7 : 1}
         position={[0, -3.5, 0]}

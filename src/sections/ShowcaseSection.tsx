@@ -14,6 +14,13 @@ const ShowcaseSection = () => {
   const rydeRef = useRef(null);
   const libraryRef = useRef(null);
   const ycDirectoryRef = useRef(null);
+  const fsRydeRef = useRef(null);
+  const fsLibraryRef = useRef(null);
+  const fsYcRef = useRef(null);
+  const rnRydeRef = useRef(null);
+  const rnLibraryRef = useRef(null);
+  const rnYcRef = useRef(null);
+  const aiRydeRef = useRef(null);
   const navigate = useNavigate();
 
   useGSAP(() => {
@@ -21,6 +28,13 @@ const ShowcaseSection = () => {
       rydeRef.current,
       libraryRef.current,
       ycDirectoryRef.current,
+      fsRydeRef.current,
+      fsLibraryRef.current,
+      fsYcRef.current,
+      rnRydeRef.current,
+      rnLibraryRef.current,
+      rnYcRef.current,
+      aiRydeRef.current,
     ];
     gsap.fromTo(
       sectionRef.current,
