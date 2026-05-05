@@ -14,13 +14,13 @@ const HeroExperince = () => {
   const screensRef = useRef<THREE.Mesh>(null);
 
   return (
-    <Canvas frameloop="demand" performance={{ min: 0.5 }} camera={{ position: isMobile ? [0, 2, 18] : [0, 2, 15], fov: 43 }}>
+    <Canvas frameloop="always" performance={{ min: 0.5 }} camera={{ position: isMobile ? [0, 2, 18] : [0, 2, 15], fov: 43 }}>
       <OrbitControls
         enablePan={false}
         enableZoom={false}
-        enableRotate={true}
-        minPolarAngle={isMobile ? Math.PI / 2 : Math.PI / 5}
-        maxPolarAngle={isMobile ? Math.PI / 2 : Math.PI / 2}
+        enableRotate={!isMobile}
+        minPolarAngle={Math.PI / 5}
+        maxPolarAngle={Math.PI / 2}
         maxDistance={20}
         minDistance={5}
       />

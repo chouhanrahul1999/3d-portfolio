@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,10 +10,14 @@ interface titleHeaderProps {
   sub?: string;
 }
 const TitleHeader = ({ title, sub }: titleHeaderProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useGSAP(() => {
-    // Animate subtitle from top
+    const container = containerRef.current;
+    if (!container) return;
+
     if (sub) {
-      gsap.fromTo('.title-sub', {
+      gsap.fromTo(container.querySelector('.title-sub'), {
         y: -50,
         opacity: 0
       }, {
@@ -21,14 +26,13 @@ const TitleHeader = ({ title, sub }: titleHeaderProps) => {
         duration: 0.8,
         ease: 'power2.out',
         scrollTrigger: {
-          trigger: '.title-sub',
+          trigger: container.querySelector('.title-sub'),
           start: 'top 80%'
         }
       });
     }
 
-    // Animate title words
-    gsap.fromTo('.title-word', {
+    gsap.fromTo(container.querySelectorAll('.title-word'), {
       y: 30,
       opacity: 0,
       rotateX: 90
@@ -40,14 +44,14 @@ const TitleHeader = ({ title, sub }: titleHeaderProps) => {
       stagger: 0.1,
       ease: 'power2.out',
       scrollTrigger: {
-        trigger: '.title-word',
+        trigger: container.querySelector('.title-word'),
         start: 'top 80%'
       }
     });
-  });
+  }, { scope: containerRef });
 
   return (
-    <div className="flex flex-col items-center  pb-20  gap-5">
+    <div ref={containerRef} className="flex flex-col items-center pb-20 gap-5">
       {sub && (
         <div className="hero-badge title-sub">
           <p>{sub}</p>

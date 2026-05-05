@@ -11,59 +11,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ShowcaseSection = () => {
   const sectionRef = useRef(null);
-  const rydeRef = useRef(null);
-  const libraryRef = useRef(null);
-  const ycDirectoryRef = useRef(null);
-  const fsRydeRef = useRef(null);
-  const fsLibraryRef = useRef(null);
-  const fsYcRef = useRef(null);
-  const rnRydeRef = useRef(null);
-  const rnLibraryRef = useRef(null);
-  const rnYcRef = useRef(null);
-  const aiRydeRef = useRef(null);
   const navigate = useNavigate();
 
   useGSAP(() => {
-    const projects = [
-      rydeRef.current,
-      libraryRef.current,
-      ycDirectoryRef.current,
-      fsRydeRef.current,
-      fsLibraryRef.current,
-      fsYcRef.current,
-      rnRydeRef.current,
-      rnLibraryRef.current,
-      rnYcRef.current,
-      aiRydeRef.current,
-    ];
     gsap.fromTo(
       sectionRef.current,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1.5,
-      },
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5 }
     );
 
-    projects.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        {
-          y: 50,
-          opacity: 0,
-        },
+    gsap.utils.toArray<HTMLElement>(".showcase-card").forEach((card) => {
+      gsap.fromTo(card,
+        { y: 60, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
+          duration: 0.8,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: card,
-            start: "top bottom-=100",
+            start: "top 85%",
           },
-        },
+        }
       );
     });
   }, []);
@@ -78,11 +47,11 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout pb-36">
           <div
-            ref={rydeRef}
+            
             onClick={() => {
               window.open("https://zentry-game.vercel.app", "_blank");
             }}
-            className="first-project-wrapper cursor-pointer"
+            className="first-project-wrapper cursor-pointer showcase-card"
           >
             <div className="image-wrapper holographic-card">
               <div className="holographic-content">
@@ -110,9 +79,9 @@ const ShowcaseSection = () => {
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project cursor-pointer" onClick={() => {
+            <div className="project cursor-pointer showcase-card" onClick={() => {
               window.open("https://apple-macbook-website1996.vercel.app/")
-            }} ref={libraryRef}>
+            }} >
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
@@ -130,7 +99,7 @@ const ShowcaseSection = () => {
               </p>
             </div>
 
-            <div className="project cursor-pointer" ref={ycDirectoryRef}>
+            <div className="project cursor-pointer showcase-card" >
               <div className="image-wrapper bg-[#FFE7EB] holographic-card">
                 <div className="holographic-content">
                   <img
@@ -155,8 +124,8 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout pb-36">
           <div
-            ref={rydeRef}
-            className="first-project-wrapper cursor-pointer"
+            
+            className="first-project-wrapper cursor-pointer showcase-card"
             onClick={() => navigate("/project/betteruptime")}
           >
             <div className="image-wrapper holographic-card">
@@ -176,8 +145,8 @@ const ShowcaseSection = () => {
 
           <div className="project-list-wrapper overflow-hidden">
             <div
-              className="project"
-              ref={libraryRef}
+              className="project showcase-card"
+              
               onClick={() => {
                 window.open(" https://crtd.in/", "_blank");
               }}
@@ -198,8 +167,8 @@ const ShowcaseSection = () => {
             </div>
 
             <div
-              className="project"
-              ref={ycDirectoryRef}
+              className="project showcase-card"
+              
               onClick={() => {
                 navigate("/project/excelidraw");
               }}
@@ -222,8 +191,8 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout pb-36 ">
           <div
-            ref={rydeRef}
-            className="first-project-wrapper cursor-pointer"
+            
+            className="first-project-wrapper cursor-pointer showcase-card"
             onClick={() => navigate("/project/fast-food-app")}
           >
             <div className="image-wrapper holographic-card">
@@ -244,8 +213,8 @@ const ShowcaseSection = () => {
 
           <div className="project-list-wrapper overflow-hidden">
             <div
-              className="project"
-              ref={libraryRef}
+              className="project showcase-card"
+              
               onClick={() => navigate("/project/movie-app")}
             >
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
@@ -265,8 +234,8 @@ const ShowcaseSection = () => {
             </div>
 
             <div
-              className="project"
-              ref={ycDirectoryRef}
+              className="project showcase-card"
+              
               onClick={() => navigate("/project/restate")}
             >
               <div className="image-wrapper bg-[#FFE7EB] holographic-card">
@@ -285,8 +254,8 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout  ">
           <div
-            ref={rydeRef}
-            className="first-project-wrapper cursor-pointer"
+            
+            className="first-project-wrapper cursor-pointer showcase-card"
             onClick={() => navigate("/project/dentwise")}
           >
             <div className="image-wrapper holographic-card">
@@ -307,8 +276,8 @@ const ShowcaseSection = () => {
 
           <div className="project-list-wrapper overflow-hidden">
             <div
-              className="project"
-              ref={ycDirectoryRef}
+              className="project showcase-card"
+              
             >
               <div className="image-wrapper bg-black-100 holographic-card overflow-hidden relative">
                 {/* animated gradient orbs */}
@@ -337,8 +306,8 @@ const ShowcaseSection = () => {
             </div>
 
             <div
-              className="project"
-              ref={ycDirectoryRef}
+              className="project showcase-card"
+              
             >
               <div className="image-wrapper bg-black-100 holographic-card overflow-hidden relative">
                 {/* animated gradient orbs */}
