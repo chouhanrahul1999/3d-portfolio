@@ -4,23 +4,43 @@ import HeroExperince from "../components/HeroModels/HeroExperince";
 import { words } from "../constants";
 import { useGSAP } from '@gsap/react'
 import AnimatedCounter from "../components/AnimatedCounter";
+import { useEffect, useRef } from "react";
+import { FaRegHandPointer } from "react-icons/fa";
 
 const Hero = () => {
+  const handRef = useRef<HTMLDivElement>(null);
+
   useGSAP(() => {
     gsap.fromTo('.hero-text h1',
-      {
-        y: 50,
-        opacity: 0
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.2,
-        duration: 1,
-        ease: 'power2.inOut'
-      }
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' }
+    );
+  });
+
+  useEffect(() => {
+    if (window.innerWidth >= 768) return;
+    const handEl = handRef.current;
+    if (!handEl) return;
+
+    const btn = document.getElementById('button');
+    if (!btn) return;
+
+    const btnRect = btn.getBoundingClientRect();
+    handEl.style.top = `${btnRect.top + btnRect.height / 2 + window.scrollY - 16}px`;
+
+    const tl = gsap.timeline({ repeat: 0, delay: 2 });
+    tl.fromTo(handEl,
+      { x: 80, opacity: 0 },
+      { x: -150, opacity: 1, duration: 1.2, ease: 'power2.out' }
     )
-  })
+    .to(handEl, { y: -8, duration: 0.4, ease: 'power1.inOut' })
+    .to(handEl, { y: 0, scale: 0.85, duration: 0.4, ease: 'power1.in' })
+    .to(handEl, { scale: 1, duration: 0.4, ease: 'power1.out' })
+    .to(handEl, { x: 80, opacity: 0, duration: 1, ease: 'power2.in', delay: 0.6 });
+
+    return () => { tl.kill(); };
+  }, []);
+
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
@@ -56,26 +76,34 @@ const Hero = () => {
             </div>
 
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Hi, I’m Rahul, a developer based in India with a passion for code.
+              Hi, I'm Rahul, a developer based in India with a passion for code.
             </p>
 
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
               id="button"
               text="See my Work"
-              onClick={() => {
-
-              }}
+              onClick={() => {}}
             />
           </div>
         </header>
 
         <figure>
-          <div className="hero-3d-layout cursor-grab">
+          <div className="hero-3d-layout cursor-grab" style={{ touchAction: 'pan-y' }}>
             <HeroExperince />
           </div>
         </figure>
       </div>
+
+      {/* Hand hint - mobile only */}
+      <div
+        ref={handRef}
+        className="md:hidden fixed right-4 pointer-events-none z-50 text-white"
+        style={{ opacity: 0, top: '50%' }}
+      >
+        <FaRegHandPointer size={36} color="#ff6b00" />
+      </div>
+
       <AnimatedCounter />
     </section>
   );
