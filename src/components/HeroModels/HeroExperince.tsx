@@ -26,7 +26,7 @@ const HeroExperince = () => {
       />
       <HeroLight />
 
-      <Particles count={50} />
+      {!isMobile && <Particles count={50} />}
       <group
         scale={isMobile ? 0.7 : 1}
         position={[0, -3.5, 0]}
@@ -35,15 +35,17 @@ const HeroExperince = () => {
         <Room screensRef={screensRef} />
       </group>
 
-      <EffectComposer>
-        <SelectiveBloom
-          selection={[screensRef] as any}
-          intensity={1}
-          luminanceThreshold={0.2}
-          luminanceSmoothing={0.9}
-          blendFunction={BlendFunction.ADD}
-        />
-      </EffectComposer>
+      {!isMobile && (
+        <EffectComposer>
+          <SelectiveBloom
+            selection={[screensRef] as any}
+            intensity={1}
+            luminanceThreshold={0.2}
+            luminanceSmoothing={0.9}
+            blendFunction={BlendFunction.ADD}
+          />
+        </EffectComposer>
+      )}
     </Canvas>
   );
 };
