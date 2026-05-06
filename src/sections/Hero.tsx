@@ -1,11 +1,11 @@
 import gsap from "gsap";
 import Button from "../components/Button";
-import HeroExperince from "../components/HeroModels/HeroExperince";
 import { words } from "../constants";
 import { useGSAP } from '@gsap/react'
 import AnimatedCounter from "../components/AnimatedCounter";
 import { useEffect, useRef } from "react";
 import { FaRegHandPointer } from "react-icons/fa";
+import HeroExperince from "../components/HeroModels/HeroExperince";
 
 const Hero = () => {
   const handRef = useRef<HTMLDivElement>(null);
@@ -90,7 +90,12 @@ const Hero = () => {
 
         <figure>
           <div className="hero-3d-layout cursor-grab" style={{ touchAction: 'pan-y' }}>
-            <HeroExperince />
+            <div className="md:block hidden w-full h-full">
+              <HeroExperince />
+            </div>
+            <div className="md:hidden w-full h-full flex items-center mt-20 justify-center">
+              <img src="/images/3dmodle.svg" alt="3D Model" className="w-7/8 h-auto object-contain rounded-xl" />
+            </div>
           </div>
         </figure>
       </div>
@@ -98,7 +103,7 @@ const Hero = () => {
       {/* Hand hint - mobile only */}
       <div
         ref={handRef}
-        className="md:hidden fixed right-4 pointer-events-none z-50 text-white"
+        className="md:hidden fixed right-4 pointer-events-none z-50"
         style={{ opacity: 0, top: '50%' }}
       >
         <FaRegHandPointer size={36} color="#ff6b00" />
