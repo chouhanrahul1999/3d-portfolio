@@ -113,37 +113,40 @@ const techStackImgs = [
 ];
 
 const techStackIcons = [
-   {
+  {
     name: "React & Nextjs Dev",
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
+    mobileImg: "/images/reactmodle.png",
   },
   {
     name: "React Native Dev",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
+    mobileImg: "/images/neactnativemodle.svg",
   },
-
   {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
+    mobileImg: "/images/logos/node.png",
   },
-
   {
     name: "Devops Devleoper",
     modelPath: "/models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
+    mobileImg: "/images/devops.svg",
   },
   {
     name: "Python Developer",
     modelPath: "/models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
+    mobileImg: "/images/python.png",
   },
 ];
 

@@ -39,7 +39,12 @@ const TechStack = () => {
               <div className="tech-card-animated-bg" />
               <div className="tech-card-content">
                 <div className="tech-icon-wrapper">
-                  <TechIcon model={icon} />
+                  <div className="md:block hidden w-full h-full">
+                    <TechIcon model={icon} />
+                  </div>
+                  <div className="md:hidden w-full h-full flex items-center justify-center">
+                    <img src={icon.mobileImg} alt={icon.name} className="w-full h-full object-contain" />
+                  </div>
                 </div>
 
                 <div className="padding-x w-full">

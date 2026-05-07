@@ -47,7 +47,7 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout pb-36">
           <div
-            
+
             onClick={() => {
               window.open("https://zentry-game.vercel.app", "_blank");
             }}
@@ -100,7 +100,7 @@ const ShowcaseSection = () => {
             </div>
 
             <div className="project cursor-pointer showcase-card" >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
                     src="/images/project3.png"
@@ -124,7 +124,7 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout pb-36">
           <div
-            
+
             className="first-project-wrapper cursor-pointer showcase-card"
             onClick={() => navigate("/project/betteruptime")}
           >
@@ -146,7 +146,7 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div
               className="project showcase-card"
-              
+
               onClick={() => {
                 window.open(" https://crtd.in/", "_blank");
               }}
@@ -168,12 +168,12 @@ const ShowcaseSection = () => {
 
             <div
               className="project showcase-card"
-              
+
               onClick={() => {
                 navigate("/project/excelidraw");
               }}
             >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img src="/images/project5.png" alt="YC Directory App" />
                 </div>
@@ -191,7 +191,7 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout pb-36 ">
           <div
-            
+
             className="first-project-wrapper cursor-pointer showcase-card"
             onClick={() => navigate("/project/fast-food-app")}
           >
@@ -214,7 +214,7 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div
               className="project showcase-card"
-              
+
               onClick={() => navigate("/project/movie-app")}
             >
               <div className="image-wrapper bg-[#FFEFDB] holographic-card">
@@ -235,10 +235,10 @@ const ShowcaseSection = () => {
 
             <div
               className="project showcase-card"
-              
+
               onClick={() => navigate("/project/restate")}
             >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img src="/images/react3.png" alt="ReState Real Estate App" />
                 </div>
@@ -254,7 +254,7 @@ const ShowcaseSection = () => {
 
         <div className="showcaselayout  ">
           <div
-            
+
             className="first-project-wrapper cursor-pointer showcase-card"
             onClick={() => navigate("/project/dentwise")}
           >
@@ -277,7 +277,7 @@ const ShowcaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div
               className="project showcase-card"
-              
+
             >
               <div className="image-wrapper bg-black-100 holographic-card overflow-hidden relative">
                 {/* animated gradient orbs */}
@@ -307,7 +307,7 @@ const ShowcaseSection = () => {
 
             <div
               className="project showcase-card"
-              
+
             >
               <div className="image-wrapper bg-black-100 holographic-card overflow-hidden relative">
                 {/* animated gradient orbs */}
