@@ -118,7 +118,7 @@ const techStackIcons = [
     modelPath: "/models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
-    mobileImg: "/images/reactmodle.png",
+    mobileImg: "/images/reactmodle.svg",
   },
   {
     name: "React Native Dev",
@@ -132,7 +132,7 @@ const techStackIcons = [
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
-    mobileImg: "/images/logos/node.png",
+    mobileImg: "/images/backendjs.svg",
   },
   {
     name: "Devops Devleoper",
