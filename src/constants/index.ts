@@ -154,8 +154,8 @@ const expCards = [
 
   {
     review: "Rahul’s contributions to Wyreflow techonology have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/wyreflow2.png",
-    logoPath: "/images/wyreflowlog.png",
+    imgPath: "/images/wyreflow.svg",
+    logoPath: "/images/wyreflow-logo.svg",
     title: "Full Stack Developer",
     date: "June 2025 - Present",
     responsibilities: [
@@ -166,8 +166,8 @@ const expCards = [
   },
   {
     review: "This is a personal project where I applied my frontend development skills, building responsive and performant web interfaces using modern technologies.",
-    imgPath: "/images/reactjs-logo5.png",
-    logoPath: "/images/tlogo.png",
+    imgPath: "/images/reactjs.svg",
+    logoPath: "/images/Threejs.svg",
     title: "Frontend Developer",
     date: "From March 2025",
     responsibilities: [
@@ -178,8 +178,8 @@ const expCards = [
   },
   {
     review: "This is a personal project where I developed cross-platform mobile applications using React Native, focusing on smooth user experience and clean architecture.",
-    imgPath: "/images/native-logo2.png",
-    logoPath: "/images/expo-logo.png",
+    imgPath: "/images/expo.svg",
+    logoPath: "/images/expo-logo.svg",
     title: "React Native Developer",
     date: "March 2025",
     responsibilities: [
@@ -190,8 +190,8 @@ const expCards = [
   },
   {
     review: "This is a personal project where I built full-stack applications with modern backend architecture, real-time features, and scalable infrastructure.",
-    imgPath: "/images/nextjs2.png",
-    logoPath: "/images/nextjs-logo1.png",
+    imgPath: "/images/nextjs.svg",
+    logoPath: "/images/next-logo.svg",
     title: "Full Stack Developer Projects",
     date: "2025 - Present",
     responsibilities: [

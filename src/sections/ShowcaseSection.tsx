@@ -82,7 +82,7 @@ const ShowcaseSection = () => {
             <div className="project cursor-pointer showcase-card" onClick={() => {
               window.open("https://apple-macbook-website1996.vercel.app/")
             }} >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
                     src="/images/project2.png"
@@ -100,7 +100,7 @@ const ShowcaseSection = () => {
             </div>
 
             <div className="project cursor-pointer showcase-card" >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
                     src="/images/project3.png"
@@ -151,7 +151,7 @@ const ShowcaseSection = () => {
                 window.open(" https://crtd.in/", "_blank");
               }}
             >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
                     src="/images/project6.png"
@@ -173,7 +173,7 @@ const ShowcaseSection = () => {
                 navigate("/project/excelidraw");
               }}
             >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img src="/images/project5.png" alt="YC Directory App" />
                 </div>
@@ -217,7 +217,7 @@ const ShowcaseSection = () => {
 
               onClick={() => navigate("/project/movie-app")}
             >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img
                     src="/images/react2.png"
@@ -238,7 +238,7 @@ const ShowcaseSection = () => {
 
               onClick={() => navigate("/project/restate")}
             >
-              <div className="image-wrapper bg-[#FFE7EB] holographic-card">
+              <div className="image-wrapper bg-[#FFEFDB] holographic-card">
                 <div className="holographic-content">
                   <img src="/images/react3.png" alt="ReState Real Estate App" />
                 </div>
