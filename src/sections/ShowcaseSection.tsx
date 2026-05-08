@@ -45,7 +45,7 @@ const ShowcaseSection = () => {
           sub="🛠️ My Works & projects Overview"
         />
 
-        <div className="showcaselayout pb-36">
+        <div className="showcaselayout md:pb-36 pb-18">
           <div
 
             onClick={() => {
@@ -122,7 +122,7 @@ const ShowcaseSection = () => {
 
         <TitleHeader title="My Full-Stack Projects" />
 
-        <div className="showcaselayout pb-36">
+        <div className="showcaselayout pb-18 md:pb-36">
           <div
 
             className="first-project-wrapper cursor-pointer showcase-card"
@@ -189,7 +189,7 @@ const ShowcaseSection = () => {
 
         <TitleHeader title="My React-Native Projects" />
 
-        <div className="showcaselayout pb-36 ">
+        <div className="showcaselayout md:pb-36 pb-18">
           <div
 
             className="first-project-wrapper cursor-pointer showcase-card"

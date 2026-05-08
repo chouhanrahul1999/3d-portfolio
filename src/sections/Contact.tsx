@@ -48,12 +48,12 @@ const Contact = () => {
 
   return (
     <section id="contact" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-3">
+      <div className="w-full h-full md:px-10 px-2">
         <TitleHeader
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
         />
-        <div className="grid-12-cols mt-16">
+        <div className="grid-12-cols md:mt-16">
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-4 md:p-10">
               <form
