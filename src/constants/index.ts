@@ -121,18 +121,18 @@ const techStackIcons = [
     mobileImg: "/images/reactmodle.svg",
   },
   {
-    name: "React Native Dev",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
-    mobileImg: "/images/neactnativemodle.svg",
-  },
-  {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
     mobileImg: "/images/backendjs.svg",
+  },
+  {
+    name: "React Native Dev",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+    mobileImg: "/images/neactnativemodle.svg",
   },
   {
     name: "Devops Devleoper",
